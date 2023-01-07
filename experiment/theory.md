@@ -20,5 +20,6 @@ The user may calculate the ultimate superimposed load of different units of the 
 
 <center>
     <img src="images/Baseshear.png" height="180px"  width="900px" >
+    
     Fig. 2 formula 2
     </center>
