@@ -2,37 +2,81 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question 1": "Which code is used for seismic design  of the structure?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "IS 1893 (Part 1)",
+        "b": "IS 456-200",
+        "c": "IS 875 (Part 1)",
+        "d": "IS 875 (Part 3)"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "IS 1893 is used for Seismic design considerations  <a href='www.google.com'>here</a>",
+        "b": "IS 456-2000 is used for Plain and reinforced Concerete  ",
+        "c": "IS 875 (Part 1) is used for the concedrations of dead load ",
+        "d": "IS 875 (Part 3) is used for the considerations of wind load"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question 2": "Method that cannot be used to determine the forces in the members of frames is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Moment Distribution method",
+        "b": "Method of sections",
+        "c": "Graphical method",
+        "d": "Method of joints"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Moment Distribution method  <a href=https://en.wikipedia.org/wiki/Moment_distribution_method'>here</a>",
+      
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+     {
+      "question 3": "In a Linear elastic structural element the stiffness is",
+      "answers": {
+        "a": "Directly proportional to flexibility",
+        "b": "Inversely proportional to flexibility",
+        "c": "Equal to flexibility",
+        "d": "Stiffness and flexibility are not related
+"
+      },
+      "explanations": {
+        "a": "In a Linear elastic structural element the stiffness is directly proportional to flexibility  ,
+      
+      },
+      "correctAnswer": "a",
+      "difficulty": "medium"
+    }
+{
+      "question 4": "Which of the following assumptions is not made while analysis of a perfect frame",
+      "answers": {
+        "a": "All the members are pin jointed",
+        "b": "Self weight of the member is neglected",
+        "c": "All members are loaded at the centre",
+        "d": "All members are subjected to either compression  or tension"
+      },
+      "explanations": {
+        "a": " while analysis of a perfect frame all members are loaded at the centre  ,
+      
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+{
+      "question 5": "The Ratio of Shear stress to shear strain is known as ",
+      "answers": {
+        "a": "Modulus of Elasticity",
+        "b": "Bulk Modulus",
+        "c": "Poisson's Ratio",
+        "d": "Modulus of Rigidity"
+      },
+      "explanations": {
+        "a": "The Ratio of Shear stress to shear strain is known as modulus of rigidity ,
+      
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
