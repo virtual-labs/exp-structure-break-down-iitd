@@ -10,7 +10,7 @@
         "d": "IS 875 (Part 3)"
       },
       "explanations": {
-        "a": "IS 1893 is used for Seismic design considerations  <a href='www.google.com'>here</a>",
+        "a": "IS 1893 is used for Seismic design considerations ",
         "b": "IS 456-2000 is used for Plain and reinforced Concerete  ",
         "c": "IS 875 (Part 1) is used for the concedrations of dead load ",
         "d": "IS 875 (Part 3) is used for the considerations of wind load"
@@ -39,11 +39,11 @@
         "a": "Directly proportional to flexibility",
         "b": "Inversely proportional to flexibility",
         "c": "Equal to flexibility",
-        "d": "Stiffness and flexibility are not related
+        "d": "Stiffness and flexibility are not related",
 "
       },
       "explanations": {
-        "a": "In a Linear elastic structural element the stiffness is directly proportional to flexibility  ,
+        "a": "In a Linear elastic structural element the stiffness is directly proportional to flexibility"  ,
       
       },
       "correctAnswer": "a",
@@ -58,7 +58,7 @@
         "d": "All members are subjected to either compression  or tension"
       },
       "explanations": {
-        "a": " while analysis of a perfect frame all members are loaded at the centre  ,
+        "a": " while analysis of a perfect frame all members are loaded at the centre"  ,
       
       },
       "correctAnswer": "c",
@@ -73,7 +73,7 @@
         "d": "Modulus of Rigidity"
       },
       "explanations": {
-        "a": "The Ratio of Shear stress to shear strain is known as modulus of rigidity ,
+        "a": "The Ratio of Shear stress to shear strain is known as modulus of rigidity" ,
       
       },
       "correctAnswer": "d",
