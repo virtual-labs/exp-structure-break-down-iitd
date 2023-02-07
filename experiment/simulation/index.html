@@ -78,9 +78,9 @@
 
 <img src="images/3D frame.png"  id="stand_img" style=
 "   position: absolute;
-    left: 130px;
-    top: 100px;
-    height: 320px;
+    left: 160px;
+    top: 160px;
+    height: 315px;
     width: 340px;
 "draggable="false"/>
 
@@ -292,18 +292,18 @@ function calctotalimposedloadB() {
         return false;
     }
     ///////////////////////////(2)////////////////////////////////
-    function calccalcSuperimploadofslabC() {
+    function calcSuperimploadofslabC() {
         let TSL3 = document.getElementById("TSL3").value;
     
     
-        let calcSuperimploadofslabC;
-        // Calculate calcSuperimploadofslabC
+        let SuperimploadofslabC;
+        // Calculate SuperimploadofslabC
        ar=
-            calcSuperimploadofslabC = (1 - (1/ (3 * (1.67 ^ 2)))) *  (((TSL3) * 3) / 2)  ;
+            SuperimploadofslabC = (1 - (1/ (3 * (1.67 ^ 2)))) *  (((TSL3) * 3) / 2)  ;
        
     
-        console.log(calcSuperimploadofslabC);
-        document.getElementById("output10").textContent = calcSuperimploadofslabC;
+        console.log(SuperimploadofslabC);
+        document.getElementById("output10").textContent = SuperimploadofslabC;
         return false;
     }
     
@@ -367,18 +367,18 @@ function calcTSL4() {
     }
 //////////////////////////(2)/////////////////////////////////
 function calcSuperimploadofslabD() {
- let TSL4 = document.getElementById("TSL4").value;
+    let TSL4 = document.getElementById("TSL4").value;
 
 
- let SuperimploadofslabD;
- // Calculate SuperimploadofslabD
-ar=
-     SuperimploadofslabD =  (((TSL4) * 3) / 2)  ;
+    let SuperimploadofslabD;
+    // Calculate SuperimploadofslabD
+   ar=
+        SuperimploadofslabD =  (((TSL4) * 3) / 2)  ;
+   
 
-
- console.log(SuperimploadofslabD);
- document.getElementById("output13").textContent = SuperimploadofslabD;
- return false;
+    console.log(SuperimploadofslabD);
+    document.getElementById("output13").textContent = SuperimploadofslabD;
+    return false;
 }
 
 //////////////////////////(3)/////////////////////////////////
@@ -531,15 +531,9 @@ color: white; visibility: hidden;"
 value="&nbsp;Split 2&nbsp;" onclick="add_cellotap()"/>
 
 <!--start analysis button  -->
-<input type="button" id="start_Analysis" style="position: absolute;
-left: 668px;
-top: 3px;
-cursor: pointer;
-font-size: 15px;
-padding: 3px;
-background-color: #2150a0;
-color: white; visibility: hidden;" 
+<input type="button" id="start_Analysis1" style="position:absolute; visibility: hidden; border-radius: 12px; left: 620px; top: 480px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Analyse&nbsp;" 
 value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
+
 <!-------Instruction lines  ------>
 <span id="s1_1" style="visibility: hidden ; position: absolute; left: 10px; top: 8px; font-size: 14px;">
     <strong> Step-1: </strong> (a) Click on Bring button to bring the 3D frame .</span>
@@ -586,7 +580,6 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 
  <!-- ////////////////////////////////START ANALYSIS BUTTON///////////////////////////////////////////// -->
 <!--Blinking arrowcubox  -->
-<input type="button" id="start_Analysis" style="position:absolute; left: 605px; top: 470px; border-radius: 12px; cursor:pointer; visibility: hiddenvisible ; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Analysis&nbsp;" onclick="navNext1()"/>
 
 
 
@@ -665,9 +658,11 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
                 <form id="SuperimploadofslabForm" onsubmit="return calcSuperimploadofslab()">
                     <input type="number" id="TSL"  step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="KN/m2">
             
-                 
-               
-                    <button type="submit12" style="position: absolute; left: 525px; top: 273px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6">Calculate</button>
+                    <button type="submit12" style="position: absolute; left: 525px; top: 273px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6" onclick="document.getElementById('hideNow1').style.display = 'block';">Calculate</button>
+                    <div id="hideNow1" style="display:none">
+                      
+                      <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1a()"></button>>Button 3</button>
+                    </div>
                 </form>
                 <output  style="position: absolute; left: 635px; top: 272px; padding-left:37px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output36" >0</output>
             </section>
@@ -694,7 +689,6 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 
 
 <!--Blinking arrowcubox  -->
-<i class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1a()"></i>
 
 </div>
 
@@ -711,8 +705,8 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 192px;">1. Enter calculated superimposed on beam: </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 222px;">2. Enter self weight of beam calculated above  : </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 252px;">3. Enter self weight of columns   : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 280px;"><strong>Note:</strong> Calculate self weight of columns by yourself.
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 118px;">KN/m    </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 280px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself.
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 118px;">KN    </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 312px;">KN/m    </p>
 
 
@@ -742,7 +736,12 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
                 <input type="number" id="beamload1a" style="position: absolute; left: 430px; top: 265px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in KN/m ">
     
            
-                <button type="submit4" style="position: absolute; left: 600px; top: 255px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4">Calculate</button>
+                <button type="submit4" style="position: absolute; left: 600px; top: 255px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4" onclick="document.getElementById('hideNow1a').style.display = 'block';">Calculate</button>
+                <div id="hideNow1a" style="display:none">
+                          
+                    <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1b()">Analyse frame 2</button>
+                    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+                </div>
             </form>
             <output  style="position: absolute; left: 544px; padding-left:37px; top: 312px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output4" >0</output>
         </section>
@@ -771,9 +770,6 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 
 
 <!--Blinking arrowcubox  -->
-<span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; 
-color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-<input type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1b()"/>
 
 </div>
 
@@ -845,9 +841,12 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
                 <form id="SuperimploadofslabBForm" onsubmit="return calcSuperimploadofslabB()">
                     <input type="number" id="TSL2"   step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
             
-                 
+                    <button type="submit6" style="position: absolute; left: 525px; top: 273px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6" onclick="document.getElementById('hideNow2').style.display = 'block';">Calculate</button>
+                    <div id="hideNow2" style="display:none">
+                      
+                      <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1c()"></button></button>
+                    </div>
                
-                    <button type="submit6" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6">Calculate</button>
                 </form>
                 <output  style="position: absolute; left: 635px;  ;top: 275px; width: 80px; height: 35px; padding-left:37px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output6" >0</output>
             </section>
@@ -876,7 +875,6 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
             <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "><strong>Important => </strong>Note the above answer for further calculations</span>
             </div>
         <!--Blinking arrowcubox  -->
-        <i class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:730px; top:500px; font-size: 35px; "onclick="navNext1c()"></i>
 
 </div>
 <!-- //////////////////////////////Scene 2B- ANALYSIS ///////////////////////--> 
@@ -893,8 +891,8 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
         <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 150px;">1. Enter calculated superimposed of slab on beam: </p>
         <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 180px;">2. Enter self weight of beam calculated above  : </p>
         <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 210px;">3. Enter self weight of columns   : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 240px;"><strong>Note:</strong> Calculate self weight of columns by yourself.
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 80px;">KN/m    </p>
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 240px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself.
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 80px;">KN    </p>
             <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 275px;">KN/m    </p>
        
             <body>
@@ -922,7 +920,12 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
                     <input type="number" id="beamload1b" style="position: absolute; left: 430px; top: 220px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="KN/m">
         
                
-                    <button type="submit8" style="position: absolute; left: 600px; top: 210px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4">Calculate</button>
+                    <button type="submit8" style="position: absolute; left: 600px; top: 210px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4" onclick="document.getElementById('hideNow2a').style.display = 'block';">Calculate</button>
+                    <div id="hideNow2a" style="display:none">
+                          
+                        <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1d()">Analyse frame 3</button>
+                        <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+                    </div>
                 </form>
                 <output  style="position: absolute; padding-left:37px; left: 544px; top: 275px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output8" >0</output>
             </section>
@@ -948,8 +951,6 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
         </div>
     
     <!--Blinking arrowcubox  -->
-<span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-<input type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1d()"/>
 
 </div>
 
@@ -1018,12 +1019,16 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
         <body>
         <script src="./script1.js"></script>
         <section>
-            <form id="calcSuperimploadofslabCForm" onsubmit="return calccalcSuperimploadofslabC()">
-                <input type="number"   step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
+            <form id="SuperimploadofslabCForm" onsubmit="return calcSuperimploadofslabC()">
+                <input type="number"  id="TSL3" step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
         
              
            
-                <button type="submit9" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn2">Calculate</button>
+                <button type="submit9" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn9" onclick="document.getElementById('hideNow3').style.display = 'block';">Calculate</button>
+                <div id="hideNow3" style="display:none">
+                      
+                    <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1e()"></button>>Button 3</button>
+                  </div>
             </form>
             <output  style="position: absolute; left: 635px; padding-left:37px; top: 275px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output10" >0</output>
         </section>
@@ -1051,7 +1056,6 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
     
     
     <!--Blinking arrowcubox  -->
-    <i class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1e()"></i>
     
     </div>
     
@@ -1072,8 +1076,8 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 192px;">4. Enter calculated superimposed of slab on beam: </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 222px;">5. Enter self weight of beam calculated above  : </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 252px;">6. Enter self weight of columns   : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 280px;"><strong>Note:</strong> Calculate self weight of columns by yourself.<br> <br>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 118px;">KN/m    </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 280px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself.<br> <br>
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 118px;">KN    </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 312px;">KN/m    </p>
         <body>
         <script src="./script.js"></script>
@@ -1100,7 +1104,12 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
                     <input id="columnselfweight1c" type="number"  style="position: absolute; left: 430px; top: 265px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in KN/m">
         
                
-                    <button type="submit11" style="position: absolute; left: 600px; top: 255px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4">Calculate</button>
+                    <button type="submit11" style="position: absolute; left: 600px; top: 255px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4"  onclick="document.getElementById('hideNow3a').style.display = 'block';">Calculate</button>
+                <div id="hideNow3a" style="display:none">
+                          
+                    <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1f()">Analyse frame 4</button>
+                    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+                </div>
                 </form>
                 <output  style="position: absolute; left: 544px; padding-left:37px; top: 312px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output12" >0</output>
             </section>
@@ -1128,9 +1137,6 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
     
     
     <!--Blinking arrowcubox  -->
-    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; 
-    color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-    <input type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1f()"/>
     
     </div>
     
@@ -1200,11 +1206,15 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
             <script src="./script1.js"></script>
             <section>
                 <form id="SuperimploadofslabDForm" onsubmit="return calcSuperimploadofslabD()">
-                    <input type="number"  step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder=" in KN/m2">
+                    <input type="number" id="TSL4" step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder=" in KN/m2">
             
                  
                
-                    <button type="submit12" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6">Calculate</button>
+                    <button type="submit12" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6" onclick="document.getElementById('hideNow4').style.display = 'block';">Calculate</button>
+                    <div id="hideNow4" style="display:none">
+                      
+                        <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1g()"></button></button>
+                      </div>
                 </form>
                 <output  style="position: absolute; left: 635px; top: 275px; width: 80px; padding-left:37px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output13" >0</output>
             </section>
@@ -1232,7 +1242,6 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
         <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> [25 (Unit weight of concrete) * Depth of Slab] + 1 KN(Floor Finish Load) + Live load =</span>
         </div>
         <!--Blinking arrowcubox  -->
-        <i class="fa fa-hand-o-right" class="blink_me" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1g()"></i>
 
 </div>
 <!-- //////////////////////////////Scene 2B- ANALYSIS ///////////////////////--> 
@@ -1251,8 +1260,10 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 150px;">1. Enter calculated superimposed of slab on beam: </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 180px;">2. Enter self weight of beam calculated above  : </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 210px;">3. Enter self weight of columns   : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 240px;"><strong>Note:</strong> Calculate self weight of columns by yourself. <br> <br>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 80px;">KN/m    </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 345px; top: 335px;"><u>Total Imposed Loads of all 2D frames </u></p>
+
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 240px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself. <br> <br>
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 80px;">KN    </p>
         <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 275px;">KN/m    </p>
         <body>
         <script src="./script.js"></script>
@@ -1278,7 +1289,12 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
                     <input id="columnselfweight1d" type="number"  style="position: absolute; left: 430px; top: 220px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="beamload1d in cm">
         
                
-                    <button type="submit8" style="position: absolute; left: 600px; top: 210px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4">Calculate</button>
+                    <button type="submit8" style="position: absolute; left: 600px; top: 210px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4" onclick="document.getElementById('hideNow4a').style.display = 'block';">Calculate</button>
+                    <div id="hideNow4a" style="display:none">
+                          
+                        <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1h()">Seismic Analysis</button>
+                        <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+                    </div>
                 </form>
                 <output  style="position: absolute; left: 544px; padding-left:37px; top: 275px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output15" >0</output>
             </section>
@@ -1314,8 +1330,6 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
         </div>
     
     <!--Blinking arrowcubox  -->
-<span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-<input type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1h()"/>
 
 </div>
 
@@ -1336,12 +1350,18 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
             <span style="position: absolute; left: 70px; top: 300px; font-size:17px; "><u>Horizontal Seismic coeffecient (Ah)</u></span>
             <span style="position: absolute; left: 70px; top: 375px; font-size:17px; "><u>Base Shear(F)</u></span>
             <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 400px;">Enter values of above calculated <strong> total weight (W) </strong> of the building and <strong> (Ah)</strong></p>
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 133px; top: 70px;">KN    </p>
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 248px; top: 70px;">KN    </p>
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 363px; top: 70px;">KN    </p>
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 478px; top: 70px;">KN    </p>
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 723px; top: 190px;">KN    </p>
+            <p class="incanvas" style="font-size:15px; position: absolute; left: 683px; top: 435px;">KN    </p>
 
 
             <output  style="position: absolute; left: 70px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output31" >B1= 0</output>            
-        <output  style="position: absolute; left: 170px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output23" >B2= 0</output>            
-        <output  style="position: absolute; left: 270px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output33" >B3= 0</output>            
-        <output  style="position: absolute; left: 370px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output34" >B4= 0</output>            
+        <output  style="position: absolute; left: 185px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output23" >B2= 0</output>            
+        <output  style="position: absolute; left: 300px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output33" >B3= 0</output>            
+        <output  style="position: absolute; left: 415px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output34" >B4= 0</output>            
 
         <br>
         <body>
@@ -1366,9 +1386,9 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
                     <select input type="number" id="zonefactor" step="any" style="position: absolute; left: 80px; top: 325px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
                         <option value=" " step="any">select seismic zone</option>
                         <option value="10">0.10 for Zone 1 (low) </option>
-                        <option value="16">0.16 for Zone 1 (moderate)</option>
-                        <option value="24">0.24 for Zone 1 (severe)</option>
-                        <option value="36">0.10 for Zone 1 (very severe)</option>
+                        <option value="16">0.16 for Zone 2 (moderate)</option>
+                        <option value="24">0.24 for Zone 3 (severe)</option>
+                        <option value="36">0.10 for Zone 4 (very severe)</option>
                       </select>
                       <select input type="number" id="importancefactor" step="any" style="position: absolute; left: 240px; top: 325px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
                         <option value=" " step="any">select type of building</option>
@@ -1401,11 +1421,15 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
     <section>
         <form id="baseshear" onsubmit="return calcbaseshear()">
             
-            <input type="number" id="finalloadW" step="0.001" style="position: absolute; left: 80px; top: 440px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN">
-            <input type="number" id="horiacclerationcoeff" style="position: absolute; left: 290px; top: 440px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.001" placeholder="">
+            <input type="number" id="finalloadW" step="0.001" style="position: absolute; left: 80px; top: 440px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="W in KN">
+            <input type="number" id="horiacclerationcoeff" style="position: absolute; left: 290px; top: 440px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.001" placeholder=" Value for Ah">
          
        
-            <button type="submit" style="position: absolute; left: 500px; top: 440px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
+            <button type="submit" style="position: absolute; left: 500px; top: 440px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn" onclick="document.getElementById('hideNow5').style.display = 'block';">Calculate</button>
+            <div id="hideNow5" style="display:none">
+                      
+                <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1i()"></button>>Button 3</button>
+              </div>
         </form>
         <output  style="position: absolute; left: 620px; padding-left:32px; top: 440px; width: 70px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;"  id="output22" >
         </output>
@@ -1414,9 +1438,8 @@ color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></st
 
     </div>
     <div id="notepad4" style="position: absolute; top: 120px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Make sumission of all the loads calculated (stated above)  </span>
+        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Make sumission of the self weight of all the beams calculated (stated above) in KN  </span>
         </div>
-        <i class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1i()"></i>
 
     </div>
 

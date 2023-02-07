@@ -9,7 +9,7 @@ function restart()
 function navNext0()
 {
 document.getElementById("canvas0").style.visibility="hidden";
-
+document.getElementById('s1_1').style.visibility="visible";
 document.getElementById("canvas1").style.visibility="visible";
 
 }
@@ -149,14 +149,14 @@ document.getElementById('add_aluminium_bar').style.visibility="visible";
 function start_analysis()
 {
 document.getElementById('start_analysis'). style.visibility="hidden";}
-
+document.getElementById('start_Analysis1').style.visibility="hidden";
 function add_aluminium_bar()
 {
 document.getElementById('arw2').style.visibility="hidden";
 document.getElementById('add_aluminium_bar').style.visibility="hidden";
 document.getElementById('aluminium_canvas1').style.visibility="visible";
 document.getElementById('aluminium_canvas1').style.animation="aluminium_canvas1 1s forwards";
-
+document.getElementById('start_Analysis1').style.visibility="hidden";
   setTimeout(function()
 
 	{
@@ -164,6 +164,8 @@ document.getElementById('s1_2').style.visibility="hidden";
 document.getElementById('s1_3').style.visibility="visible";
 document.getElementById('arw3').style.visibility="visible";
 document.getElementById('add_cellotap').style.visibility="visible";
+document.getElementById('start_Analysis1').style.visibility="hidden";
+
 
 	},1000);
 
@@ -175,7 +177,7 @@ document.getElementById('arw3').style.visibility="hidden";
 document.getElementById('add_cellotap').style.visibility="hidden";
 document.getElementById('cellotap_canvas1').style.visibility="visible";
 document.getElementById('cellotap_canvas1').style.animation="cellotap_canvas1 1s forwards";
-
+document.getElementById('start_Analysis1').style.visibility="visible";
   setTimeout(function()
 
 	{
@@ -183,7 +185,7 @@ document.getElementById('cellotap_canvas1').style.animation="cellotap_canvas1 1s
 document.getElementById('arw5').style.visibility="hidden";
 document.getElementById('s1_3').style.visibility="hidden";
 document.getElementById('s1_4').style.visibility="visible";
-document.getElementById('start_Analysis').style.visibility="visible";
+document.getElementById('start_Analysis1').style.visibility="visible";
 },1000);
 }
 function start_Analysis()
@@ -334,10 +336,10 @@ function trans_pzt1()
 
 setTimeout(function()
 {
-document.getElementById('arrow1').style.visibility="visible";
-document.getElementById('nextButton1').style.visibility="visible";
+document.getElementById('arrow1').style.visibility="hidden";
+document.getElementById('nextButton1').style.visibility="hidden";
 document.getElementById('s1_10').style.visibility="hidden";
-document.getElementById('s1_11').style.visibility="visible";
+document.getElementById('s1_11').style.visibility="hidden";
 
 },1000);
 }
