@@ -3,7 +3,7 @@
 
 1. Click on start experiment button to start the experiment.
 
-<im g src="images/1.png"/>
+<img src="images/1.png"/>
 
 Step-1: (a) Click on 'Bring' button to bring the 3D frame .
 
@@ -17,19 +17,19 @@ Step-1: (c) Click on 'start analysis' button to start the analysis of the 2D fra
 
 <img src="images/4.png"/>
 
-Step-1: (d) Perform the calculations for 2D frame 'A'.
+Step-2: (a) Perform the calculations for 2D frame 'A'.
 
 <img src="images/5.png"/>
 
-Step-1: (e) Click on 'Analyse Frame 2' button to perform calculation for 2D frame 2 & similarly carry out the same procedure for frame 3 & 4. 
+Step-3: Click on 'Analyse Frame 2' button to perform calculation for 2D frame 2 & similarly carry out the same procedure for frame 3 & 4. 
 
 <img src="images/6.png"/>
 
-Step-1: (f) Click on 'Seismic Analysis' button to carry out Seismic Load Analysis of the Frame.
+Step-4: (a) Click on 'Seismic Analysis' button to carry out Seismic Load Analysis of the Frame.
 
 <img src="images/7.png"/>
 
-Step-1: (g) Carry out Seismic load Analysis and determine the Base Shear.
+Step-4: (b) Carry out Seismic load Analysis and determine the Base Shear.
 
 <img src="images/8.png"/>
 
