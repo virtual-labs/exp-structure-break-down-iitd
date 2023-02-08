@@ -62,10 +62,10 @@
     const myQuestions = [{
             question: "1. Unit Weight of concrete used is", 
             answers: {
-                a: "25 KN", 
-                b: "Positive electrode with Positive electrode", 
+                a: "25 KN/m3", 
+                b: "25 KN ", 
                 c: "2500 KN",
-                d: "0.025 N", 
+                d: "0.25 KG/m2", 
             },
             correctAnswer: "a" 
         },
