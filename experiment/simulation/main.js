@@ -1,4 +1,477 @@
 
+function totslabload1() {
+  const DL1 = document.getElementById("DL1").value;
+  const LL1 = document.getElementById("LL1").value;
+
+  // Check if input1 is 4 and input2 is 1
+  if (DL1 == 1 && LL1 == 1) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("Totalload1").innerHTML = "8.75 KN/m<sup>2</sup>";
+      document.getElementById("Totalload2").innerHTML = "8.75 KN/m<sup>2</sup>";
+      document.getElementById("wrong1a").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("text1").style.visibility="visible";
+      document.getElementById("text2").style.visibility="visible";
+      document.getElementById("text3").style.visibility="visible";
+      document.getElementById("text4").style.visibility="visible";
+
+      document.getElementById("Area1").style.visibility="visible";
+      document.getElementById("TL1").style.visibility="visible";
+      document.getElementById("button2").style.visibility="visible";
+    
+
+    }, 1200);
+    
+    document.getElementById("Totalload1").style.display = "block"; 
+
+    document.getElementById("text1").style.display = "block"; 
+    document.getElementById("text2").style.display = "block"; 
+    document.getElementById("text3").style.display = "block"; 
+    document.getElementById("text4").style.display = "block"; 
+    document.getElementById("Area1").style.display = "block"; 
+    document.getElementById("TL1").style.display = "block"; 
+    document.getElementById("button2").style.display = "block"; 
+    
+
+    }
+
+    if (DL1 == "" && LL1 == "") { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong1a").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong1a").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong1a").innerHTML = "Wrong Input. DL = (25 x thiskness of slab) = 3.75KN/m<sup>2</sup> & LL = 4 KN/m<sup>2</sup>";
+  }, 1000);
+   document.getElementById("wrong1a").style.display = "block";
+  }
+  }
+
+
+//////////////////////////////////////////////////Fixed End Moment for span BA////////////////////////////////////////////////////
+
+function tottrapload1() {
+  const Area1 = document.getElementById("Area1").value;
+  const TL1 = document.getElementById("TL1").value;
+
+  // Check if input1 is 4 and input2 is 1
+  if (Area1 == 1 && TL1 == 1) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("outputtrapload").innerHTML = "45.93 KN";
+      document.getElementById("wrong1b").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("text5").style.visibility="visible";
+      document.getElementById("text6").style.visibility="visible";
+      document.getElementById("text7").style.visibility="visible";
+      document.getElementById("inputtrapload").style.visibility="visible";
+      document.getElementById("button3").style.visibility="visible";
+    
+
+    }, 1200);
+    
+    document.getElementById("outputtrapload").style.display = "block"; 
+    document.getElementById("inputtrapload").style.display = "block"; 
+
+    document.getElementById("text5").style.display = "block"; 
+    document.getElementById("text6").style.display = "block"; 
+    document.getElementById("text7").style.display = "block"; 
+    document.getElementById("text8").style.display = "block"; 
+    document.getElementById("button3").style.display = "block"; 
+    
+
+    }
+
+    if (Area1 == "" && TL1 == "") { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong1b").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong1b").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong1b").innerHTML = "Wrong Input.Area of trapezoid (APQB) = 5.25m<sup>2</sup> & load per unit area = 8.75KN/m<sup>2</sup>";
+  }, 1000);
+   document.getElementById("wrong1b").style.display = "block";
+  }
+  }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////Fixed End Moment for span BA////////////////////////////////////////////////////
+
+function trapimposedload1() {
+  const inputtrapload = document.getElementById("inputtrapload").value;
+
+  // Check if input1 is 4 and input2 is 1
+  if (inputtrapload == 1 ) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("output-superimposed1a").innerHTML = "9.81 KN/m";
+      document.getElementById("wrong1c").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("text8").style.visibility="visible";
+      document.getElementById("output-superimposed1b").innerHTML ="9.81 KN/m";
+    
+
+    }, 1200);
+    
+    document.getElementById("output-superimposed1a").style.display = "block"; 
+
+    document.getElementById("text8").style.display = "block"; 
+    document.getElementById("output-superimposed1b").style.display = "block"; 
+    document.getElementById("wrong1c").style.display = "block"; 
+
+
+    }
+
+    if (inputtrapload == "" ) { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong1c").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong1c").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong1c").innerHTML = "Wrong Input. Total load of trapezoidal section = 45.93 KN";
+  }, 1000);
+   document.getElementById("wrong1c").style.display = "block";
+  }
+  }
+///////////////////////////////////////////PAGE 1 COMPLETE///////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////Fixed End Moment for span BA////////////////////////////////////////////////////
+
+function tottriload2() {
+  const Area2 = document.getElementById("Area2").value;
+  const TL2 = document.getElementById("TL2").value;
+
+  // Check if input1 is 4 and input2 is 1
+  if (Area2 == 1 && TL2 == 1) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("outputtriload").innerHTML = "19.68 KN";
+      document.getElementById("wrong2b").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("text13").style.visibility="visible";
+      document.getElementById("text14").style.visibility="visible";
+      document.getElementById("text15").style.visibility="visible";
+      document.getElementById("inputtriload").style.visibility="visible";
+      document.getElementById("button6").style.visibility="visible";
+    
+
+    }, 1200);
+    
+    document.getElementById("outputtriload").style.display = "block"; 
+    document.getElementById("inputtriload").style.display = "block"; 
+
+    document.getElementById("text13").style.display = "block"; 
+    document.getElementById("text14").style.display = "block"; 
+    document.getElementById("text15").style.display = "block"; 
+    document.getElementById("button6").style.display = "block"; 
+    document.getElementById("wrong2b").style.display = "block"; 
+
+
+    }
+
+    if (Area2 == "" && TL2 == "") { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong2b").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong2b").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong2b").innerHTML = "Wrong Input. Area of triangular slab (APD) = 2.25m<sup>2</sup> & load per unit area = 8.75KN/m<sup>2</sup>";
+  }, 1000);
+   document.getElementById("wrong2b").style.display = "block";
+  }
+  }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////Fixed End Moment for span BA////////////////////////////////////////////////////
+
+function triimposedload2() {
+  const inputtriload = document.getElementById("inputtriload").value;
+
+  // Check if input1 is 4 and input2 is 1
+  if (inputtriload == 1 ) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("output-superimposed2a").innerHTML = "6.56 KN/m";
+      document.getElementById("wrong2c").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("text16").style.visibility="visible";
+      document.getElementById("output-superimposed2b").innerHTML ="6.56 KN/m";
+    
+
+    }, 1200);
+    
+    document.getElementById("output-superimposed2a").style.display = "block"; 
+
+    document.getElementById("text16").style.display = "block"; 
+    document.getElementById("output-superimposed2b").style.display = "block"; 
+    document.getElementById("wrong2c").style.display = "block"; 
+
+
+    }
+
+    if (inputtriload == "" ) { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong2c").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong2c").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong2c").innerHTML = "Wrong Input. Total load of triangle section = 45.93 KN";
+  }, 1000);
+   document.getElementById("wrong2c").style.display = "block";
+  }
+  }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////PAGE 2 COMPLETE////////////////////////////////////////////////////
+
+function beamselfwt1() {
+  const longerbeamlength1 = document.getElementById("longerbeamlength1").value;
+  const longerbeamwidth1 = document.getElementById("longerbeamwidth1").value;
+  const longerbeamdepth1 = document.getElementById("longerbeamdepth1").value;
+
+
+  // Check if input1 is 4 and input2 is 1
+  if (longerbeamlength1 == 1 && longerbeamwidth1 == 1 && longerbeamdepth1 == 1) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("longerbeam1selfwt").innerHTML = "11.25 KN";
+      document.getElementById("wrong3a").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("longerbeam2selfwt").innerHTML ="11.25 KN";
+      document.getElementById("text17").style.visibility="visible";
+      document.getElementById("text18").style.visibility="visible";
+      document.getElementById("text19").style.visibility="visible";
+      document.getElementById("text19b").style.visibility="visible";
+      document.getElementById("shorterbeam1length").style.visibility="visible";
+      document.getElementById("shorterbeam1width").style.visibility="visible";
+      document.getElementById("shorterbeam1depth").style.visibility="visible";
+      document.getElementById("button8").style.visibility="visible";
+
+
+    }, 1200);
+    
+    document.getElementById("longerbeam1selfwt").style.display = "block"; 
+
+    document.getElementById("wrong3a").style.display = "block"; 
+    document.getElementById("longerbeam2selfwt").style.display = "block"; 
+
+    document.getElementById("text17").style.display = "block"; 
+    document.getElementById("text18").style.display = "block"; 
+    document.getElementById("text19").style.display = "block"; 
+    document.getElementById("text19").style.display = "block"; 
+    document.getElementById("text19b").style.display = "block"; 
+
+    document.getElementById("shorterbeam1length").style.display = "block"; 
+    document.getElementById("shorterbeam1width").style.display = "block"; 
+    document.getElementById("button8").style.display = "block"; 
+
+
+    }
+
+    if (longerbeamlength1 == "" && longerbeamwidth1 == "" && longerbeamdepth1 == "") { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong3a").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong3a").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong3a").innerHTML = "Wrong Input. l<sub>Y</sub>  = 5m, width = 0.3m & depth = 0.3m";
+  }, 1000);
+   document.getElementById("wrong3a").style.display = "block";
+  }
+  }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+function beamselfwt2() {
+  const shorterbeam1length = document.getElementById("shorterbeam1length").value;
+  const shorterbeam1width = document.getElementById("shorterbeam1width").value;
+  const shorterbeam1depth = document.getElementById("shorterbeam1depth").value;
+
+
+  // Check if input1 is 4 and input2 is 1
+  if (shorterbeam1length == 1 && shorterbeam1width == 1 && shorterbeam1depth == 1) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("shorterbeam1selfwt").innerHTML = "6.75 KN";
+      document.getElementById("wrong3b").style.visibility="hidden";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("shorterbeam2selfwt").innerHTML ="2";
+      document.getElementById("text20").style.visibility="visible";
+      document.getElementById("text21").style.visibility="visible";
+      document.getElementById("text22").style.visibility="visible";
+      document.getElementById("text23").style.visibility="visible";
+      document.getElementById("text24").style.visibility="visible";
+
+
+
+    }, 1200);
+    
+    document.getElementById("shorterbeam1selfwt").style.display = "block"; 
+    document.getElementById("wrong3b").style.display = "block"; 
+    document.getElementById("shorterbeam2selfwt").style.display = "block"; 
+    document.getElementById("text20").style.display = "block"; 
+    document.getElementById("text21").style.display = "block"; 
+    document.getElementById("text22").style.display = "block"; 
+    document.getElementById("text23").style.display = "block"; 
+    document.getElementById("text24").style.display = "block"; 
+
+
+    }
+
+    if (shorterbeam1length == "" && shorterbeam1width == "" && shorterbeam1depth == "") { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong3b").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong3b").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong3b").innerHTML = "Wrong Input. l<sub>X</sub>  = 3m, width = 0.3m & depth = 0.3m";
+  }, 1000);
+   document.getElementById("wrong3b").style.display = "block";
+  }
+  }
+///////////////////////////////////////PAGE 3 Complete///////////////////////////////////////////////////////////
+///////////////
+
+function Ah() {
+  const frame = document.getElementById("frame").value;
+  const zonefactor = document.getElementById("zonefactor").value;
+  const importancefactor = document.getElementById("importancefactor").value;
+  const responcefactor = document.getElementById("responcefactor").value;
+  const SAGvalue = document.getElementById("SAGvalue").value;
+
+
+  // Check if input1 is 4 and input2 is 1
+  if (frame == 1 ) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("horiAcclertnCoeff").innerHTML = (((zonefactor)/100)/2) * (((importancefactor) / (responcefactor)) * ((SAGvalue))) ;
+      document.getElementById("wrong4a").style.visibility="hidden";
+      document.getElementById("text26").style.visibility="visible";
+      document.getElementById("text25").style.visibility="visible";
+      document.getElementById("text27").style.visibility="visible";
+      document.getElementById("finalloadW").style.visibility="visible";
+      document.getElementById("horiacclerationcoeff").style.visibility="visible";
+      document.getElementById("button9").style.visibility="visible";
+
+    }, 800);
+
+    document.getElementById("horiAcclertnCoeff").style.display = "block"; 
+    document.getElementById("wrong4a").style.display = "block"; 
+    document.getElementById("text26").style.display = "block"; 
+    document.getElementById("text25").style.display = "block"; 
+    document.getElementById("text27").style.display = "block"; 
+    document.getElementById("finalloadW").style.display = "block"; 
+    document.getElementById("horiacclerationcoeff").style.display = "block"; 
+    document.getElementById("button9").style.display = "block"; 
+
+   
+
+    }
+
+    if (frame == "" ) { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong4a").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong4a").style.display = "block";
+
+  } 
+  }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+function calcbaseshear() {
+  const finalloadW = document.getElementById("finalloadW").value;
+  const horiacclerationcoeff = document.getElementById("horiacclerationcoeff").value;
+
+
+  // Check if input1 is 4 and input2 is 1
+  if (finalloadW == 6 ) { 
+    // Slowly display the text after 2 seconds
+    setTimeout(function() {
+      document.getElementById("baseshear").innerHTML = (parseFloat(finalloadW)) * (parseFloat(horiacclerationcoeff));
+      document.getElementById("wrong4b").style.visibility="hidden";
+    }, 800);
+
+    setTimeout(function() {
+      document.getElementById("stand_img1").style.visibility="visible";
+
+    }, 1000);
+    setTimeout(function() {
+      document.getElementById("stand_img2").style.visibility="visible";
+
+    }, 1300);
+
+    document.getElementById("baseshear").style.display = "block"; 
+    document.getElementById("stand_img1").style.display = "block"; 
+    document.getElementById("stand_img2").style.display = "block"; 
+
+    }
+
+    if (finalloadW == "" ) { 
+      // Slowly display the text after 2 seconds
+      setTimeout(function() {
+        document.getElementById("wrong4b").textContent = "Please Fill the Required Fields.";
+
+        
+      }, 1000);
+      document.getElementById("wrong4b").style.display = "block";
+
+  } else {
+    // Display an error message
+    setTimeout(function() {
+   document.getElementById("wrong4b").innerHTML = "Wrong Input. W<sub>T</sub>= 95.48 KN";
+  }, 1000);
+   document.getElementById("wrong4b").style.display = "block";
+  }
+  }
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 function restart()
 {
@@ -17,24 +490,69 @@ document.getElementById("canvas1").style.visibility="visible";
 function navNext1()
 {
 document.getElementById("canvas1").style.visibility="hidden";
-
 document.getElementById("canvas1a").style.visibility="visible";
+document.getElementById("text1").style.visibility="hidden";
+document.getElementById("text2").style.visibility="hidden";
+document.getElementById("text3").style.visibility="hidden";
+document.getElementById("text4").style.visibility="hidden";
+document.getElementById("text5").style.visibility="hidden";
+document.getElementById("text6").style.visibility="hidden";
+document.getElementById("text7").style.visibility="hidden";
+document.getElementById("text8").style.visibility="hidden";
+
+document.getElementById("Area1").style.visibility="hidden";
+document.getElementById("TL1").style.visibility="hidden";
+document.getElementById("inputtrapload").style.visibility="hidden";
+document.getElementById("button3").style.visibility="hidden";
+document.getElementById("button2").style.visibility="hidden";
+document.getElementById("wrong1a").style.visibility="hidden";
+document.getElementById("wrong1b").style.visibility="hidden";
+document.getElementById("wrong1c").style.visibility="hidden";
+
+
+
 
 }
 
 function navNext1a()
 {
 document.getElementById("canvas1a").style.visibility="hidden";
-
 document.getElementById("canvas1b").style.visibility="visible";
+document.getElementById("text13").style.visibility="hidden";
+document.getElementById("text14").style.visibility="hidden";
+document.getElementById("text15").style.visibility="hidden";
+document.getElementById("text16").style.visibility="hidden";
+
+document.getElementById("inputtriload").style.visibility="hidden";
+document.getElementById("button6").style.visibility="hidden";
+document.getElementById("wrong2b").style.visibility="hidden";
+document.getElementById("wrong2c").style.visibility="hidden";
 
 }
 
 function navNext1b()
 {
+  
 document.getElementById("canvas1b").style.visibility="hidden";
-
 document.getElementById("canvas1c").style.visibility="visible";
+document.getElementById("text17").style.visibility="hidden";
+document.getElementById("text18").style.visibility="hidden";
+document.getElementById("text19").style.visibility="hidden";
+document.getElementById("text19b").style.visibility="hidden";
+
+document.getElementById("text20").style.visibility="hidden";
+document.getElementById("text21").style.visibility="hidden";
+document.getElementById("text22").style.visibility="hidden";
+document.getElementById("text23").style.visibility="hidden";
+document.getElementById("text24").style.visibility="hidden";
+document.getElementById("button8").style.visibility="hidden";
+
+document.getElementById("shorterbeam1length").style.visibility="hidden";
+document.getElementById("shorterbeam1width").style.visibility="hidden";
+document.getElementById("shorterbeam1depth").style.visibility="hidden";
+document.getElementById("wrong3a").style.visibility="hidden";
+document.getElementById("wrong3b").style.visibility="hidden";
+
 
 
 }
@@ -42,8 +560,17 @@ document.getElementById("canvas1c").style.visibility="visible";
 function navNext1c()
 {
 document.getElementById("canvas1c").style.visibility="hidden";
-
 document.getElementById("canvas1d").style.visibility="visible";
+document.getElementById("text25").style.visibility="hidden";
+document.getElementById("text26").style.visibility="hidden";
+document.getElementById("text27").style.visibility="hidden";
+document.getElementById("finalloadW").style.visibility="hidden";
+document.getElementById("horiacclerationcoeff").style.visibility="hidden";
+document.getElementById("button9").style.visibility="hidden";
+document.getElementById("stand_img1").style.visibility="hidden";
+document.getElementById("stand_img2").style.visibility="hidden";
+
+document.getElementById("wrong4a").style.visibility="hidden";
 
 
 }

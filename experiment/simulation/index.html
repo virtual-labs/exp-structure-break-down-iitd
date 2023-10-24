@@ -41,9 +41,9 @@
 <!-- Graph Script link close -->
 <script>
 
-    var simsubscreennum=0;
+    const simsubscreennum=0;
 
-    var temp=0;
+    const temp=0;
 
 </script>
 
@@ -92,379 +92,8 @@
 <input type="button" id="nextButton0" style="position:absolute; left: 605px; top: 500px; cursor:pointer; font-size: 15px; background-color: #67726b; border-radius: 12px; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext0()"/>
 
 </div>
-
-
 <!-- ///////////////////////////Intro Page complete//////////////////////////////--> 
 
-  
-
-
-  
-
- <!-- //////////////////////////////JAWA SCRIPT START ///////////////////////-->
- 
- <script>
-    //////////////Analysis of longer frame 1/////////////////////
-    //////////////////////////(1)/////////////////////////////////
-    function calcTSL() {
-        var frame = document.getElementById("frame").value;
-        var slabdepth1a = document.getElementById("slabdepth1a").value;
-        var slabLL1a = document.getElementById("slabLL1a").value;
-    
-       
-        // Calculate TSL
-        if (frame === 'frame 1') {
-           var TSL = 25 * (parseFloat(slabdepth1a)) + (parseFloat (1) + parseFloat(slabLL1a))   ;
-        } else {
-            TSL = 0 ;
-        }
-    
-      
-        document.getElementById("output").textContent = TSL;
-        
-        return false;
-        
-    }
-    
-    //////////////////////////(2)/////////////////////////////////
-
-     //////////////Calculation of Max force at centre/////////////////////
-    //////////////////////////TRAP-1/////////////////////////////////
-
-    function calcTrap1maxmiddleload() {
-        
-        totaltrap1load = document. getElementById("totaltrap1load"). value;
-     
-        document. getElementById("output2"). innerHTML = totaltrap1load * 1.5 ;
-        return false;
-    }
-
-    //////////////////////////(2B)/////////////////////////////////
-    function calcSuperimploadofslab() {
-        let TSL = document.getElementById("TSL").value;
-    
-    
-        let Superimploadofslab;
-        // Calculate Superimploadofslab
-       ar=
-            Superimploadofslab = (1 - (1/ (3 * (1.67 ^ 2)))) *  (((TSL) * 3) / 2)  ;
-       
-    
-        console.log(Superimploadofslab);
-        document.getElementById("output36").textContent = Superimploadofslab;
-        return false;
-    }
-    
-    
-//////////////////////////(3)/////////////////////////////////
-
-function calcbeamselfweight() {
-    beamlength1a = document. getElementById("beamlength1a"). value;
-    beamwidth1a = document. getElementById("beamwidth1a"). value;
-    beamdepth1a = document. getElementById("beamdepth1a"). value;
-    
-      
-        document. getElementById("output3a"). innerHTML =  (beamlength1a * beamwidth1a * beamdepth1a) * 25 ;
-        document. getElementById("output31"). innerHTML =  (beamlength1a * beamwidth1a * beamdepth1a) * 25 ;
-
-        return false;
-    }
-
-//////////////////////////(4)/////////////////////////////////           
-
-   function calctotalimposedload() {
-       
-       var columnselfweight1a = document.getElementById("columnselfweight1a").value;
-       var slabload1a = document.getElementById("slabload1a").value;
-       var beamload1a = document.getElementById("beamload1a").value;
-       var x = parseFloat(columnselfweight1a) + parseFloat(slabload1a) + parseFloat(beamload1a);
-
-   
-       document. getElementById("output4"). innerHTML =  x  ;
-       document. getElementById("output4b"). innerHTML =  x ;
-   
-       
-       
-       return false;}
-   
-   //////////////Analysis of shorter frame 1/////////////////////
-   //////////////////////////(1)/////////////////////////////////
-     
-   function calcTSL2() {
-    var frame2 = document.getElementById("frame2").value;
-    var slabdepth1b = document.getElementById("slabdepth1b").value;
-    var slabLL1b = document.getElementById("slabLL1b").value;
-
-    
-    // Calculate TSL2
-    if (frame2 === 'frame 2') {
-        TSL2 = 25 * (parseFloat(slabdepth1b)) + (parseFloat (1) + parseFloat(slabLL1b))   ;
-    } else {
-        TSL2 = 0 ;
-    }
-
-    document.getElementById("output5").textContent = TSL2;
-    return false;
-    
-}
- //////////////Calculation of Max force at centre/////////////////////
-    //////////////////////////Triangle-1/////////////////////////////////
-
-    function calcTriangle1maxmiddleload() {
-        
-        totaltri1load = document. getElementById("totaltri1load"). value;
-     
-        document. getElementById("output37"). innerHTML = totaltri1load * 1.5 ;
-        return false;
-    }
-//////////////////////////(2)/////////////////////////////////
-function calcSuperimploadofslabB() {
-    let TSL2 = document.getElementById("TSL2").value;
-
-
-    let SuperimploadofslabB;
-    // Calculate SuperimploadofslabB
-   ar=
-        SuperimploadofslabB =  (((TSL2) * 3) / 2)  ;
-   
-
-    console.log(SuperimploadofslabB);
-    document.getElementById("output6").textContent = SuperimploadofslabB;
-    return false;
-}
-  
-//////////////////////////(3)/////////////////////////////////
-
-function calcbeamBselfweight() {
-
-    beamlength1b = document.getElementById("beamlength1b").value;
-   beamwidth1b = document.getElementById("beamwidth1b").value;
-   beamdepth1b = document.getElementById("beamdepth1b").value;
-
-  
-   document. getElementById("output7B"). innerHTML =  (beamlength1b * beamwidth1b * beamdepth1b) * 25 ;
-   document. getElementById("output32B"). innerHTML =  (beamlength1b * beamwidth1b * beamdepth1b) * 25 ;
-
-        return false;
-    }
-
-//////////////////////////(4)/////////////////////////////////           
-
-function calctotalimposedloadB() {
-   
-   let columnselfweight1b = document.getElementById("columnselfweight1b").value;
-   let slabload1b = document.getElementById("slabload1b").value;
-   let beamload1b = document.getElementById("beamload1b").value;
-   var x = parseFloat(columnselfweight1b) + parseFloat(slabload1b) + parseFloat(beamload1b);
-
-   document.getElementById("output8").textContent = x;
-   document.getElementById("output8b").textContent = x;
-   return false;}
-
- //////////////Analysis of longer frame 2/////////////////////
-//////////////////////////(1)/////////////////////////////////
-
-    function calcTSL3() {
-        var frame3 = document.getElementById("frame3").value;
-        var slabdepth1c = document.getElementById("slabdepth1c").value;
-        var slabLL1c = document.getElementById("slabLL1c").value;
-    
-        
-        // Calculate TSL3
-        if (frame3 === 'frame 3') {
-            TSL3 = 25 * (parseFloat(slabdepth1c)) + (parseFloat(1) + parseFloat(slabLL1c))    ;
-        } else {
-            TSL3 = 0 ;
-        }
-    
-        document.getElementById("output9").textContent = TSL3;
-        return false;
-        
-    }
-     //////////////Calculation of Max force at centre/////////////////////
-    //////////////////////////TRAP-2/////////////////////////////////
-
-    function calcTrap2maxmiddleload() {
-        
-        totaltrap2load = document. getElementById("totaltrap2load"). value;
-     
-        document. getElementById("output38"). innerHTML = totaltrap2load * 1.5 ;
-        return false;
-    }
-    ///////////////////////////(2)////////////////////////////////
-    function calcSuperimploadofslabC() {
-        let TSL3 = document.getElementById("TSL3").value;
-    
-    
-        let SuperimploadofslabC;
-        // Calculate SuperimploadofslabC
-       ar=
-            SuperimploadofslabC = (1 - (1/ (3 * (1.67 ^ 2)))) *  (((TSL3) * 3) / 2)  ;
-       
-    
-        console.log(SuperimploadofslabC);
-        document.getElementById("output10").textContent = SuperimploadofslabC;
-        return false;
-    }
-    
-//////////////////////////(3)/////////////////////////////////
-
-    function calcbeamCselfweight() {
-        beamlength1c = document. getElementById("beamlength1c"). value;
-        beamwidth1c = document. getElementById("beamwidth1c"). value;
-        beamdepth1c = document. getElementById("beamdepth1c"). value;
-    
-    
-      
-        document. getElementById("output11"). innerHTML =  (beamlength1c * beamwidth1c * beamdepth1c) * 25 ;
-        document. getElementById("output33"). innerHTML =  (beamlength1c * beamwidth1c * beamdepth1c) * 25 ;
-
-        return false;
-   
-   }
-//////////////////////////(4)///////////////////////////////////           
-
-   function calctotalimposedloadC() {
-       
-       var columnselfweight1c = document.getElementById("columnselfweight1c").value;
-       var slabload1c = document.getElementById("slabload1c").value;
-       var beamload1c = document.getElementById("beamload1c").value;
-   
-       var x = parseFloat(columnselfweight1c) + parseFloat(slabload1c) + parseFloat(beamload1c);
-
-       document.getElementById("output12").textContent = x;
-       document.getElementById("output12b").textContent = x;
-       return false;}
-//////////////Analysis of shorter frame 2/////////////////////
-//////////////////////////(1)/////////////////////////////////
-  
-function calcTSL4() {
- var frame4 = document.getElementById("frame4").value;
- var slabdepth1d = document.getElementById("slabdepth1d").value;
- var slabLL1d = document.getElementById("slabLL1d").value;
-
- // Calculate TSL4
- if (frame4 === 'frame 4') {
-     var TSL4 = 25 * (parseFloat(slabdepth1d)) + (parseFloat (1) + parseFloat(slabLL1d))    ;
- } else {
-     TSL4 = 0 ;
- }
-
-
- document.getElementById("output12B").textContent = TSL4;
- return false;
- 
-}
-//////////////Calculation of Max force at centre/////////////////////
-    //////////////////////////Triangle-2/////////////////////////////////
-
-    function calcTriangle2maxmiddleload() {
-        
-        totaltri2load = document. getElementById("totaltri2load"). value;
-     
-        document. getElementById("output39"). innerHTML = totaltri2load * 1.5 ;
-        return false;
-    }
-//////////////////////////(2)/////////////////////////////////
-function calcSuperimploadofslabD() {
-    let TSL4 = document.getElementById("TSL4").value;
-
-
-    let SuperimploadofslabD;
-    // Calculate SuperimploadofslabD
-   ar=
-        SuperimploadofslabD =  (((TSL4) * 3) / 2)  ;
-   
-
-    console.log(SuperimploadofslabD);
-    document.getElementById("output13").textContent = SuperimploadofslabD;
-    return false;
-}
-
-//////////////////////////(3)/////////////////////////////////
-
-function calcbeamDselfweight() {
-    beamlength1d = document. getElementById("beamlength1d"). value;
-    beamwidth1d = document. getElementById("beamwidth1d"). value;
-        beamdepth1d = document. getElementById("beamdepth1d"). value;
-    
-    
-      
-        document. getElementById("output14"). innerHTML =  (beamlength1d * beamwidth1d * beamdepth1d) * 25 ;
-        document. getElementById("output34"). innerHTML =  (beamlength1d * beamwidth1d * beamdepth1d) * 25 ;
-
-        return false;
-   
-
-
-
-}
-//////////////////////////(4)/////////////////////////////////           
-
-function calctotalimposedloadD() {
-
-var columnselfweight1d = document.getElementById("columnselfweight1d").value;
-var slabload1d = document.getElementById("slabload1d").value;
-var beamload1d = document.getElementById("beamload1d").value;
-
-       var x = parseFloat(columnselfweight1d) + parseFloat(slabload1d) + parseFloat(beamload1d);
-
-document.getElementById("output15").textContent = x;
-document.getElementById("output15b").textContent = x;
-return false;}
-
-
-
-
-    //////////////Calculation of Base Shear/////////////////////
-    //////////////////////////(1)/////////////////////////////////
-
-    function calcbaseshear() {
-        
-        finalloadW = document. getElementById("finalloadW"). value;
-        horiacclerationcoeff = document. getElementById("horiacclerationcoeff"). value;
-    
-    
-      
-        document. getElementById("output22"). innerHTML = finalloadW * horiacclerationcoeff;
-        return false;
-    }
-     //////////////Calculation of Base Shear/////////////////////
-    //////////////////////////(1)/////////////////////////////////
-
-    function calctotalweightofsalb() {
-        
-        thicknessofslab = document. getElementById("thicknessofslab"). value;
-        lengthofslab = document. getElementById("lengthofslab"). value;
-        widthofslab = document. getElementById("widthofslab"). value;
-
-    
-        document. getElementById("output35"). innerHTML = (25 * (widthofslab * lengthofslab )) * thicknessofslab;
-        return false;
-    }
-    //////////////////////////Calculation of Horizontal accleration coeffecient/////////////////////////////////
-    function calchoriAcclertnCoeff() {
-        let zonefactor = document.getElementById("zonefactor").value;
-        let importancefactor = document.getElementById("importancefactor").value;
-        let responcefactor = document.getElementById("responcefactor").value;
-        let SAGvalue = document.getElementById("SAGvalue").value;
-    
-    
-        let horiAcclertnCoeff;
-        // Calculate horiAcclertnCoeff
-       ar=
-       horiAcclertnCoeff = (((zonefactor)/100)/2) * (((importancefactor) / (responcefactor)) * ((SAGvalue)))  ;
-       
-    
-        console.log(horiAcclertnCoeff);
-        document.getElementById("output21").textContent = horiAcclertnCoeff;
-        return false;
-    }
-
-    
-
-    </script>
- <!-- //////////////////////////////JAWA SCRIPT END ///////////////////////-->
 <!-------------BACKGROUND IMAGE AND STYLE ------------->
 <div class="simsubscreen" id="canvas1" style="visibility: hidden; background: url(images/);" ></br>
     <div id="btn_btn" style="width: 750px;
@@ -531,7 +160,7 @@ color: white; visibility: hidden;"
 value="&nbsp;Split 2&nbsp;" onclick="add_cellotap()"/>
 
 <!--start analysis button  -->
-<input type="button" id="start_Analysis1" style="position:absolute; visibility: hidden; border-radius: 12px; left: 620px; top: 480px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Analyse&nbsp;" 
+<input type="button" id="start_Analysis1" style="position:absolute; visibility: hidden; border-radius: 12px; left: 620px; top: 480px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Analysis&nbsp;" 
 value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 
 <!-------Instruction lines  ------>
@@ -599,93 +228,54 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
 
     <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculations for Slab S-1</u></strong></span>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 25px;">1. Select the frame  : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 50px;">2. Enter Depth of the slab  : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 75px;">3. Enter imposed load (live load) on the slab  : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 165px;"><strong><u>Maximum force at the centre of the trapezoidial slab </u></strong></p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 190px;">1. Enter total slab load calculated above  : </p>
-    <span style="position: absolute; left: 40px; top: 240px; font-size:17px; "><u><strong>Calculation for superimposed load of slab</strong></u></span>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 265px;">1. Enter above calculated <u>total load of slab </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 130px;">KN/m2</p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 190px;">KN/m</p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 272px;">KN/m</p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 25px;">Thickness of Slab (t) = 0.15m, Live load (LL)= 3KN/m<sup>2</sup> & Floor finish = 1KN/m<sup>2</sup> </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 50px;"><strong>1. Load per unit area of the slab</strong> </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 80px; color: #1000a1;">[1 KN(Floor Finish Load) + DL + LL] </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 110px;">[ 1 + &emsp;&emsp;&nbsp;&nbsp; + &emsp;&emsp;&nbsp;&nbsp; ] =  </p>
+    <input type="text" id="DL1" style="position: absolute; text-align: center; left: 60px; top: 120px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <input type="text" id="LL1" style="position: absolute; text-align: center; left: 113px; top: 120px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <output            id="Totalload1"  style="position: absolute;  left: 175px; top: 120px; width: 85px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+    <button id="button1" style="position: absolute; left: 320px; top: 120px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="totslabload1()">Calc. </button>
+    <output  class= "output-wrong1a" id="wrong1a" style="position: absolute; left: 100px;  top: 150px; width: 280px; height: 55px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
 
-
-
-
-
-    <br> <br> <br> <br> <br>
-
-
-    <body>
-    <script src="./script.js"></script>
-    <section>
-        <form id="TSLForm" onsubmit="return calcTSL()">
-            <select id="frame" style="position: absolute; left: 390px; top: 30px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                <option value=" ">select frame</option>
-                <option value="frame 1">frame 1</option>
-                <option value="frame 2">frame 2</option>
-                <option value="frame 3">frame 3</option>
-                <option value="frame 4">frame 4</option>
-              </select>
-            <input type="number" id="slabdepth1a" step="0.01" style="position: absolute; left: 390px; top: 60px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in m">
-            <input type="number" id="slabLL1a" style="position: absolute; left: 390px; top: 90px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in m">
-         
-       
-            <button type="submit" style="position: absolute; left: 560px; top: 92px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
-        </form>
-        <output  style="position: absolute; left: 540px; top: 130px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; padding-right:20px; padding-left:37px;  background-color: #4c4b4b; color: #FFF;  "id="output" step="0.01">0</output> 
-        
-    </section>
-    </body>
+    <p class="incanvas" id="text1" style="font-size:15px; position: absolute; left: 20px; top: 150px;"><Strong>2. Now load acting on trapezoidal section of the slab (APQB)</Strong> </p>
+    <p class="incanvas" id="text2" style="font-size:15px; position: absolute; left: 20px; top: 180px; color: #1000a1;"><Strong>Area of the trapezoidal section x Total load</Strong> </p>
+    <p class="incanvas" id="text3" style="font-size:15px; position: absolute; left: 20px; top: 210px; color: #1000a1;"><Strong>1 / 2 [ (l<sub>X</sub> x l<sub>Y</sub>) - (l<sub>X</sub><sup>2</sup> / 2) ] x [ load per unit area of slab]</Strong> </p>
+    <p class="incanvas" id="text4" style="font-size:15px; position: absolute; left: 20px; top: 260px;">[ &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; ] =</p>
+    <input type="text" id="Area1"style="position: absolute; text-align: center; left: 36px; top: 270px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <input type="text" id="TL1" style="position: absolute; text-align: center; left: 88px; top: 270px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <output  class="output-trapload" id="outputtrapload" style="position: absolute; text-align: center; left: 150px; top: 270px; width: 85px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+    <button id="button2" style="position: absolute; left: 320px; top: 270px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick=" tottrapload1()">Calc. </button>
+    <output  class= "output-wrong1b" id="wrong1b" style="position: absolute; left: 100px;  top: 300px; width: 280px; height: 55px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
     
-    <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="baseshear" onsubmit="return calcTrap1maxmiddleload()">
-                
-                <input type="number" id="totaltrap1load" step="0.001" style="position: absolute; left: 370px; top: 198px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
-             
-           
-                <button type="submit" style="position: absolute; left: 525px; top: 195px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 635px; top: 190px; padding-left:37px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;"  id="output2" >0</output>
-        </section>
-        </body>
-        <body>
-            <script src="./script1.js"></script>
-            <section>
-                <form id="SuperimploadofslabForm" onsubmit="return calcSuperimploadofslab()">
-                    <input type="number" id="TSL"  step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="KN/m2">
-            
-                    <button type="submit12" style="position: absolute; left: 525px; top: 273px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6" onclick="document.getElementById('hideNow1').style.display = 'block';">Calculate</button>
-                    <div id="hideNow1" style="display:none">
-                      
-                      <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1a()"></button>>Button 3</button>
-                    </div>
-                </form>
-                <output  style="position: absolute; left: 635px; top: 272px; padding-left:37px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output36" >0</output>
-            </section>
-          </body>   
+    <p class="incanvas" id="text5"style="font-size:15px; position: absolute; left: 20px; top: 300px;">The above calculated load is to be converted into UDL to transfer it uniformly over the beam</p>
+    <p class="incanvas" id="text6"style="font-size:15px; position: absolute; left: 20px; top: 330px; color: #1000a1; ">3. Superimposed UDL acting on beam AB = total load of trapezoidal section / Length of the beam AB</p>
+    <p class="incanvas" id="text7"style="font-size:15px; position: absolute; left: 20px; top: 360px;">UDL on beam AB = &emsp;&emsp;&nbsp;&nbsp; / 5 = </p>
+    <input type="text" id="inputtrapload" style="position: absolute; text-align: center; left: 157px; top: 370px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <output  id="output-superimposed1a" class="output-mfbc" style="position: absolute; text-align: center; left: 232px; top: 370px; width: 74px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+    <button id="button3" style="position: absolute; left: 320px; top: 370px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="trapimposedload1()">Calc. </button>
+    <output  class= "output-wrong1c" id="wrong1c" style="position: absolute; left: 100px;  top: 400px; width: 280px; height: 55px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
+   
+    <p class="incanvas" id="text8" style="font-size:15px; position: absolute; left: 20px; top: 410px;"><Strong>Similarly UDL acting on Beam DC = </Strong> </p>
+    <output  class="superimposed1b" id="output-superimposed1b" style="position: absolute; text-align: center; left: 270px; top: 420px; width: 74px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+
+
+
 </div>
 
 
 <img src="images/2d long 1.png" style=
 "   position: absolute;
-    left: 10px;
-    top: 335px;
+    left: 530px;
+    top: 10px;
     
     height: 240px;
     width: 280px;
    
     "draggable="false"/>
 
-<div id="notepad1" style="position: absolute; top: 130px; width: 473px; left:5px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-    <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> [25 x Depth of Slab] + [1 KN(Floor Finish Load) + Imposed load] =</span>
-    </div>
-    <div id="notepad4" style="position: absolute; top: 312px; width: 473px; left:5px; right:25px; height: 37px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "><strong>Important => </strong>Note the above answer for further calculations</span>
-        </div>
+<button class="fa fa-hand-o-right" id="nextButton4" style=" color: rgb(119, 119, 121); position:absolute; left:700px; height: 40px; width: 70px; top:510px; font-size: 35px; "onclick="navNext1a()"></button>
+
 
 
 <!--Blinking arrowcubox  -->
@@ -700,73 +290,50 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-2 ------------->
 <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
 
-    <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><u>Calculations for Beam B-1 </u></span>
-    <span style="position: absolute; left: 30px; top: 170px; font-size:17px; "><u>Calculations for total imposed loads of the frame</u></span>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 192px;">1. Enter calculated superimposed on beam: </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 222px;">2. Enter self weight of beam calculated above  : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 252px;">3. Enter self weight of columns   : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 280px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself.
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 118px;">KN    </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 312px;">KN/m    </p>
+   
+    <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculations for Slab S-3</u></strong></span>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 25px;">Thickness of Slab (t) = 0.15m, Live load (LL)= 3KN/m<sup>2 </sup>& Floor finish = 1KN/m<sup>2</sup> </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 50px;"><strong>1. Load per unit area of the slab</strong> [1 KN(Floor Finish Load) + DL + LL] = <strong>8.75 KN/m<sup>2</sup></strong> </p>
 
-
-        <br> <br> <br> <br> <br>
-
-    <body>
-    <script src="./script.js"></script>
-    <section>
-        <form id="beamselfweightForm" onsubmit="return calcbeamselfweight()">
-            <input id="beamlength1a" type="number"  step="0.01" style="position: absolute; left: 40px; top: 75px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam length in m">
-            <input id="beamwidth1a" type="number"  step="0.01" style="position: absolute; left: 220px; top: 75px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;"placeholder="Beam width in m">
-            <input id="beamdepth1a" type="number"  step="0.01" style="position: absolute; left: 400px; top: 75px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam depth in m">
-
-       
-            <button type="submit3" style="position: absolute; left: 600px; top: 80px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn3">Calculate</button>
-        </form>
-        <output  style="position: absolute; left: 544px; padding-left:37px; top: 118px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output3a" >0</output>
-    </section>
-    </body>
-
-    <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="columnweightForm" onsubmit="return calctotalimposedload()">
-                <input type="number" id="columnselfweight1a"  step="0.01" style="position: absolute; left: 430px; top: 205px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m">
-                <input type="number" id="slabload1a" style="position: absolute; left: 430px; top: 235px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in KN/m">
-                <input type="number" id="beamload1a" style="position: absolute; left: 430px; top: 265px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in KN/m ">
+    <p class="incanvas" id="text9" style="font-size:15px; position: absolute; left: 20px; top: 90px;"><Strong>Now load acting on triangular section of the slab (APD)</Strong> </p>
+    <p class="incanvas" id="text10" style="font-size:15px; position: absolute; left: 20px; top: 120px;"><Strong>Area of the triangular section x Total load</Strong> </p>
+    <p class="incanvas" id="text11" style="font-size:15px; position: absolute; left: 20px; top: 150px; color: #1000a1;"><Strong>[l<sub>X</sub> ( l<sub>X</sub> / 2) / 2]  x [ Total load ]</Strong> </p>
+    <p class="incanvas" id="text12" style="font-size:15px; position: absolute; left: 20px; top: 180px;">[ &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; ] =</p>
+    <input type="text" id="Area2"style="position: absolute; text-align: center; left: 36px; top: 190px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <input type="text" id="TL2" style="position: absolute; text-align: center; left: 88px; top: 190px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <output  class="output-triload" id="outputtriload" style="position: absolute; text-align: center; left: 155px; top: 190px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+    <button id="button5" style="position: absolute; left: 320px; top: 190px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="tottriload2()">Calc. </button>
+    <output  class= "output-wrong2b" id="wrong2b" style="position: absolute; left: 100px;  top: 220px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
     
-           
-                <button type="submit4" style="position: absolute; left: 600px; top: 255px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4" onclick="document.getElementById('hideNow1a').style.display = 'block';">Calculate</button>
-                <div id="hideNow1a" style="display:none">
-                          
-                    <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1b()">Analyse frame 2</button>
-                    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-                </div>
-            </form>
-            <output  style="position: absolute; left: 544px; padding-left:37px; top: 312px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output4" >0</output>
-        </section>
-        </body>
+    <p class="incanvas" id="text13"style="font-size:15px; position: absolute; left: 20px; top: 220px;"><u>The above calculated load is to be converted into UDL to transfer it uniformly over the beam</u></p>
+    <p class="incanvas" id="text14"style="font-size:15px; position: absolute; left: 20px; top: 250px; color: #1000a1; "><strong>UDL acting on beam AB = total load load of triangular section (APD) / Length of the beam AD</strong></p>
+    <p class="incanvas" id="text15"style="font-size:15px; position: absolute; left: 20px; top: 280px;">UDL on beam AD = &emsp;&emsp;&nbsp;&nbsp; / 5 = </p>
+    <input type="text" id="inputtriload" style="position: absolute; text-align: center; left: 157px; top: 290px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+    <output  id="output-superimposed2a" class="output-mfbc" style="position: absolute; text-align: center; left: 210px; top: 290px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+    <button id="button6" style="position: absolute; left: 320px; top: 290px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="triimposedload2()">Calc. </button>
+    <output  class= "output-wrong2c" id="wrong2c" style="position: absolute; left: 100px;  top: 320px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
+   
+    <p class="incanvas" id="text16" style="font-size:15px; position: absolute; left: 20px; top: 330px;"><Strong>Similarly UDL acting on Beam BC = </Strong> </p>
+    <output  class="superimposed2b" id="output-superimposed2b" style="position: absolute; text-align: center; left: 210px; top: 340px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
 
-           
+
+
+
 </div>
 
 
-<img src="images/2d long 1.png" style=
+<img src="images/2d_Short_1.png" style=
 "   position: absolute;
-    left: 10px;
-    top: 335px;
+    left: 530px;
+    top: 10px;
     
     height: 240px;
     width: 280px;
    
     "draggable="false"/>
 
-<div id="notepad3" style="position: absolute; top: 118px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px; ">
-    <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Self Weight of Beam = Area x Depth x 25 (Unit Wt. of Concrete) =</span>
-    </div>
-    <div id="notepad4" style="position: absolute; top: 312px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-    <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Total superimposed load = Slab load + Self Weight of beam + Self weight of Columns</span>
-    </div>
+<button class="fa fa-hand-o-right" id="nextButton4" style=" color: rgb(119, 119, 121); position:absolute; left:700px; height: 40px; width: 70px; top:510px; font-size: 35px; "onclick="navNext1b()"></button>
+
 
 
 <!--Blinking arrowcubox  -->
@@ -785,79 +352,49 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
     
     <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-2 ------------->
     <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
-        <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculations for Slab S-2</u></strong></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 25px;">1. Select the frame  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 50px;">2. Enter Depth of the slab  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 75px;">3. Enter imposed load (live load) on the slab  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 165px;"><strong><u>Maximum force at the centre of the triangular slab </u></strong></p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 190px;">1. Enter total slab load calculated above  : </p>
-        <span style="position: absolute; left: 40px; top: 240px; font-size:17px; "><u><strong>Calculation for superimposed load of slab</strong></u></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 265px;">2. Enter above calculated <u>total load of slab S-2 </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 130px;">KN/m2</p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 190px;">KN/m</p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 272px;">KN/m</p>
-        <br> <br> <br> <br> <br>
-    
+        <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculation of self weight of beam</u></strong></span>
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 35px; color: #1000a1;"><strong>Self weight of longer Beam (W<sub>B1</sub>) = Volume (l<sub>y</sub> x width x thickness) x density of concrete.</strong> </p>
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 65px;">[ &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; ] x 25 =</p>
+        <input type="text" id="longerbeamlength1" style="position: absolute; text-align: center; left: 37px; top: 75px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+        <input type="text" id="longerbeamwidth1" style="position: absolute; text-align: center; left: 89px; top: 75px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+        <input type="text" id="longerbeamdepth1" style="position: absolute; text-align: center; left: 140px; top: 75px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+        <output  class="output-longerbeam1selfwt" id="longerbeam1selfwt" style="position: absolute; text-align: center; left: 235px; top: 75px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+        <button id="button7" style="position: absolute; left: 320px; top: 75px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="beamselfwt1()">Calc. </button>
+        <output  class= "output-wrong3a" id="wrong3a" style="position: absolute; left: 100px;  top: 105px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
         
-        <body>
-            <script src="./script.js"></script>
-            <section>
-                <form id="TSL2Form" onsubmit="return calcTSL2()">
-                    <select id="frame2" style="position: absolute; left: 390px; top: 30px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                        <option value=" ">select frame</option>
-                        <option value="frame 1">frame 1</option>
-                        <option value="frame 2">frame 2</option>
-                        <option value="frame 3">frame 3</option>
-                        <option value="frame 4">frame 4</option>
-                      </select>                    
-                    <input id="slabdepth1b" type="number"  step="0.01" style="position: absolute; left: 390px; top: 60px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in m">
-                    <input id="slabLL1b" type="number" step="0.01" style="position: absolute; left: 390px; top: 90px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in m">
-                 
-               
-                    <button type="submit5" style="position: absolute; left: 560px; top: 92px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn5">Calculate</button>
-                </form>
-                <output  style="position: absolute; left: 540px; top: 130px; padding-left:37px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" id="output5" >0</output>
-            </section>
-            </body>
-            
-             
-        <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="baseshear" onsubmit="return calcTriangle1maxmiddleload()">
-                
-                <input type="number" id="totaltri1load" step="0.001" style="position: absolute; left: 370px; top: 198px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
-             
-           
-                <button type="submit" style="position: absolute; left: 525px; top: 195px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 635px; top: 195px ;padding-left:37px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;"  id="output37" >0</output>
-        </section>
-        </body>
-            
-            <body>
-            <script src="./script1.js"></script>
-            <section>
-                <form id="SuperimploadofslabBForm" onsubmit="return calcSuperimploadofslabB()">
-                    <input type="number" id="TSL2"   step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
-            
-                    <button type="submit6" style="position: absolute; left: 525px; top: 273px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6" onclick="document.getElementById('hideNow2').style.display = 'block';">Calculate</button>
-                    <div id="hideNow2" style="display:none">
-                      
-                      <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1c()"></button></button>
-                    </div>
-               
-                </form>
-                <output  style="position: absolute; left: 635px;  ;top: 275px; width: 80px; height: 35px; padding-left:37px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output6" >0</output>
-            </section>
-        </body>
-                
+        <p class="incanvas" id="text17" style="font-size:15px; position: absolute; left: 40px; top: 105px;">Similarly the self weight of beam (W<sub>B2</sub>) = </p>
+        <output  class="output-mfbc" id="longerbeam2selfwt" style="position: absolute; text-align: center; left: 325px; top: 115px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+       
+        <p class="incanvas" id="text18" style="font-size:15px; position: absolute; left: 40px; top: 145px; color: #1000a1;"><strong>Self weight of shorter Beam (W<sub>B3</sub>) = Volume (l<sub>x</sub> x width x thickness) x density of concrete.</strong> </p>
+        <p class="incanvas" id="text19" style="font-size:15px; position: absolute; left: 20px; top: 175px;">[ &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; ] x 25 =</p>
+        <input type="text" id="shorterbeam1length" style="position: absolute; text-align: center; left: 37px; top: 185px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+        <input type="text" id="shorterbeam1width" style="position: absolute; text-align: center; left: 89px; top: 185px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+        <input type="text" id="shorterbeam1depth"style="position: absolute; text-align: center; left: 140px; top: 185px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
+        <output  class="output-shorterbeam1selfwt" id="shorterbeam1selfwt" style="position: absolute; text-align: center; left: 235px; top: 185px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+        <button id="button8" style="position: absolute; left: 320px; top: 185px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="beamselfwt2()">Calc. </button>
+        <output  class= "output-wrong3b" id="wrong3b"style="position: absolute; left: 100px;  top: 215px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
+
+        <p class="incanvas" id="text19b" style="font-size:15px; position: absolute; left: 40px; top: 215px;">Similarly the self weight of beam (W<sub>B4</sub>) = </p>
+        <output  class="output-mfbc" id="shorterbeam2selfwt" style="position: absolute; text-align: center; left: 325px; top: 225px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+
+
+        <span id="text20"style="position: absolute; left: 30px; top: 245px; font-size:17px; "><strong><u>Calculation of self weight of columns</u></strong></span>
+        <p id="text21" class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 285px;"><strong>Self weight of the column (W<sub>C1</sub>) = Volume (l<sub>c</sub> x width x thickness) x density of concrete.</strong> </p>
+        <p id="text22" class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 315px;color: #1000a1;">[ 3.5 x 0.4 x 0.4 ] x 25 = 5.4KN</p>
+        <p id="text23"class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 345px;">Similarly the self weight of column C<sub>2</sub>, C<sub>3</sub>& C<sub>4</sub> = 5.4 KN.</p>
+
+        <span id="text24" style="position: absolute; left: 30px; top: 375px; font-size:17px; "><strong><u>Now Calculate the total load transfered to the footing</u><br><br>Hint:</strong> Slab load (S<sub></sub>1</sub> + S<sub></sub>2</sub> + S<sub></sub>3</sub> + S<sub></sub>4</sub>) +<br> Self weight of beams (B<sub>1</sub> + B<sub>2</sub> + B<sub>3</sub> + B<sub>4</sub>) + <br>Self weight of columns (C<sub>1</sub> + C<sub>2</sub> + C<sub>3</sub> + C<sub>4</sub>)</span>
+        <output  class="output-mfbc" style="position: absolute; text-align: center; left: 30px; top: 405px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+        <output  class="output-mfbc" style="position: absolute; text-align: center; left: 120px; top: 405px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+        <output  class="output-mfbc" style="position: absolute; text-align: center; left: 30px; top: 445px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+        <output  class="output-mfbc" style="position: absolute; text-align: center; left: 120px; top: 445px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+
         </div>
                
     
     
     
-    <img src="images/2d_Short_1.png" style=
+    <img src="images/3D frame.png" style=
     "   position: absolute;
         left: 460px;
         top: 325px;
@@ -866,14 +403,10 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
         width: 270px;
         "draggable="false"/>
     
+    <button class="fa fa-hand-o-right" id="nextButton4" style=" color: rgb(119, 119, 121); position:absolute; left:720px; height: 40px; width: 70px; top:510px; font-size: 35px; "onclick="navNext1c()"></button>
+
     
-    
-        <div id="notepad6" style="position: absolute; top: 130px; width: 473px; left:5px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> [25 x Depth of Slab] + [1 KN(Floor Finish Load) + Imposed load] =</span>
-        </div>
-        <div id="notepad2" style="position: absolute; top: 322px; width: 468px; left:5px; right:25px; height: 37px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-            <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "><strong>Important => </strong>Note the above answer for further calculations</span>
-            </div>
+       
         <!--Blinking arrowcubox  -->
 
 </div>
@@ -885,561 +418,102 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 
     <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-2 ------------->
     <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
-    
-        <span style="position: absolute; left: 40px; top: 5px; font-size:17px; "><u>Calculations for Beam B-2</u></span>
-        <span style="position: absolute; left: 40px; top: 125px; font-size:17px; "><u>Calculations for total imposed loads of the frame-2</u></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 150px;">1. Enter calculated superimposed of slab on beam: </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 180px;">2. Enter self weight of beam calculated above  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 210px;">3. Enter self weight of columns   : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 240px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself.
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 80px;">KN    </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 275px;">KN/m    </p>
-       
-            <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="beamBselfweightForm" onsubmit="return calcbeamBselfweight()">
-                <input id="beamlength1b" type="number"  step="0.001" style="position: absolute; left: 40px; top: 40px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam length in m">
-                <input id="beamwidth1b" type="number"  step="0.001" style="position: absolute; left: 220px; top: 40px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;"placeholder="Beam width in m">
-                <input id="beamdepth1b" type="number"  step="0.001" style="position: absolute; left: 400px; top: 40px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam depth in m">
-    
-           
-           
-                <button type="submit7" style="position: absolute; left: 600px; top: 45px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn3">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 544px; padding-left:37px; top: 80px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output7B" >0</output>
-        </section>
-        </body>
-    
-        <body>
-            <script src="./script.js"></script>
-            <section>
-                <form id="columnweightBForm" onsubmit="return calctotalimposedloadB()">
-                    <input type="number" id="columnselfweight1b" step="0.01" style="position: absolute; left: 430px; top: 160px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="KN/m">
-                    <input type="number" id="slabload1b" style="position: absolute; left: 430px; top: 189px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="KN/m">
-                    <input type="number" id="beamload1b" style="position: absolute; left: 430px; top: 220px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="KN/m">
-        
-               
-                    <button type="submit8" style="position: absolute; left: 600px; top: 210px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4" onclick="document.getElementById('hideNow2a').style.display = 'block';">Calculate</button>
-                    <div id="hideNow2a" style="display:none">
-                          
-                        <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1d()">Analyse frame 3</button>
-                        <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-                    </div>
-                </form>
-                <output  style="position: absolute; padding-left:37px; left: 544px; top: 275px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output8" >0</output>
-            </section>
-            </body>
-    
-               
-    </div>
-    <img src="images/2d_Short_1.png" style=
-    "   position: absolute;
-    left: 40px;
-    top: 325px;
-    
-    height: 230px;
-    width: 270px;
-       
-        "draggable="false"/>
-    
-    <div id="notepad3" style="position: absolute; top: 80px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Self Weight of Beam = Area x Depth x 25 (Unit Wt. of Concrete) =</span>
-        </div>
-        <div id="notepad4" style="position: absolute; top: 275px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Total superimposed load = Slab load + Self Weight of beam + Self weight of Columns</span>
-        </div>
-    
-    <!--Blinking arrowcubox  -->
-
-</div>
-
-<!-------------------SECOND (B) FRAME ANALYSIS COMPLETE-------------->
-<!-------------------THIRD (C) FRAME ANALYSIS START-------------->
- <!-------------BACKGROUND IMAGE AND STYLE ------------->
- <div class="simsubscreen" id="canvas1e" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
-
-
-
-    
-
-
-    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-1------------->
-    
-    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
-        <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculations for Slab S-3</u></strong></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 25px;">1. Select the frame  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 50px;">2. Enter Depth of the slab  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 75px;">3. Enter imposed load (live load) on the slab  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 165px;"><strong><u>Maximum force at the centre of the trapezoidial slab </u></strong></p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 190px;">3. Enter total slab load calculated above  : </p>
-        <span style="position: absolute; left: 40px; top: 240px; font-size:17px; "><u><strong>Calculation for superimposed load of slab</strong></u></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 265px;">4. Enter above calculated <u>total load of slab </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 130px;">KN/m2</p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 720px; top: 190px;">KN/m</p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 285px;">KN/m</p>
-        <br> <br> <br> <br> <br>
-    
-    
-        <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="TSL3Form" onsubmit="return calcTSL3()">
-                <select id="frame3" style="position: absolute; left: 390px; top: 30px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                    <option value=" ">select frame</option>
-                    <option value="frame 1">frame 1</option>
-                    <option value="frame 2">frame 2</option>
-                    <option value="frame 3">frame 3</option>
-                    <option value="frame 4">frame 4</option>
-                  </select>
-                <input type="number"  step="0.01" style="position: absolute; left: 390px; top: 60px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in m">
-                <input type="number"  style="position: absolute; padding-left:37px; left: 390px; top: 90px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in m">
-             
-           
-                <button type="submit8" style="position: absolute; left: 560px; top: 95px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 540px; top: 130px; width: 80px; padding-left:37px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" id="output9" >0</output>
-        </section>
-        </body>
-        
-        <body>
-            <script src="./script.js"></script>
-            <section>
-                <form id="baseshear" onsubmit="return calcTrap2maxmiddleload()">
-                    
-                    <input type="number" id="totaltrap2load" step="0.001" style="position: absolute; left: 370px; top: 198px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
-                 
-               
-                    <button type="submit" style="position: absolute; left: 525px; top: 195px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
-                </form>
-                <output  style="position: absolute; left: 645px; padding-left:37px; top: 190px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;"  id="output38" ></output>
-            </section>
-            </body>
-        
-        <body>
-        <script src="./script1.js"></script>
-        <section>
-            <form id="SuperimploadofslabCForm" onsubmit="return calcSuperimploadofslabC()">
-                <input type="number"  id="TSL3" step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
-        
-             
-           
-                <button type="submit9" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn9" onclick="document.getElementById('hideNow3').style.display = 'block';">Calculate</button>
-                <div id="hideNow3" style="display:none">
-                      
-                    <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1e()"></button>>Button 3</button>
-                  </div>
-            </form>
-            <output  style="position: absolute; left: 635px; padding-left:37px; top: 275px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output10" >0</output>
-        </section>
-        
-            
-    </div>
-    
-    
-    <img src="images/2d long 2.png" style=
-    "   position: absolute;
-    left: 10px;
-    top: 335px;
-    
-    height: 240px;
-    width: 280px;
-       
-        "draggable="false"/>
-    
-    <div id="notepad1" style="position: absolute; top: 130px; width: 473px; left:5px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Self Weight of Beam = Area x Depth ofthe beam x 25 (Unit Wt. of Concrete) =</span>
-        </div>
-        <div id="notepad2" style="position: absolute; top: 312px; width: 473px; left: 5px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; border-radius: 12px; color: #FFF; "> [25 (Unit weight of concrete) * Depth of Slab] + 1 KN(Floor Finish Load) + Live load =</span>
-        </div>
-    
-    
-    <!--Blinking arrowcubox  -->
-    
-    </div>
-    
-    <!-- //////////////////////////////Scene 2A- ANALYSIS ///////////////////////--> 
-    
-     <!-------------BACKGROUND IMAGE AND STYLE ------------->
-     <div class="simsubscreen" id="canvas1f" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
-    
-    
-    
-        
-    
-    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-3 part-2 ------------->
-    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
-
-        <span style="position: absolute; left: 40px; top: 5px; font-size:17px; "><u>Calculations for Beam-3</u></span>
-    <span style="position: absolute; left: 40px; top: 170px; font-size:17px; "><u>Calculations for total imposed loads of the frame</u></span>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 192px;">4. Enter calculated superimposed of slab on beam: </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 222px;">5. Enter self weight of beam calculated above  : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 252px;">6. Enter self weight of columns   : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 280px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself.<br> <br>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 118px;">KN    </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 312px;">KN/m    </p>
-        <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="beamCselfweightForm" onsubmit="return calcbeamCselfweight()">
-                <input id="beamlength1c" type="number"  step="0.001" style="position: absolute; left: 40px; top: 75px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam length in m">
-                <input id="beamwidth1c" type="number"  step="0.001" style="position: absolute; left: 220px; top: 75px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;"placeholder="Beam width in m">
-                <input id="beamdepth1c" type="number"  step="0.001" style="position: absolute; left: 400px; top: 75px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam depth in m">
-    
-           
-           
-                <button type="submit10" style="position: absolute; left: 600px; top: 80px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn3">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 544px; padding-left:37px; top: 118px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output11" >0</output>
-        </section>
-        </body>
-    
-        <body>
-            <script src="./script.js"></script>
-            <section>
-                <form id="columnweightCForm" onsubmit="return calctotalimposedloadC()">
-                    <input id="beamload1c" type="number"  step="0.01" style="position: absolute; left: 430px; top: 205px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m">
-                    <input id="slabload1c" type="number"  style="position: absolute; left: 430px; top: 235px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in KN/m">
-                    <input id="columnselfweight1c" type="number"  style="position: absolute; left: 430px; top: 265px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in KN/m">
-        
-               
-                    <button type="submit11" style="position: absolute; left: 600px; top: 255px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4"  onclick="document.getElementById('hideNow3a').style.display = 'block';">Calculate</button>
-                <div id="hideNow3a" style="display:none">
-                          
-                    <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1f()">Analyse frame 4</button>
-                    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-                </div>
-                </form>
-                <output  style="position: absolute; left: 544px; padding-left:37px; top: 312px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output12" >0</output>
-            </section>
-            </body>
-    
-               
-    </div>
-    
-    
-    <img src="images/2d long 2.png" style=
-    "   position: absolute;
-    left: 10px;
-    top: 335px;
-    
-    height: 240px;
-    width: 280px;
-        "draggable="false"/>
-    
-    <div id="notepad3" style="position: absolute; top: 118px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Self Weight of Beam = Area x Depth of the beam x 25 (Unit Wt. of Concrete) =</span>
-        </div>
-        <div id="notepad4" style="position: absolute; top: 312px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> [25(Unit weight of concrete) * Depth of Slab] + 1 KN(Floor Finish Load) + Live load =</span>
-        </div>
-    
-    
-    <!--Blinking arrowcubox  -->
-    
-    </div>
-    
-    <!-------------------THIRD (C) FRAME ANALYSIS COMPLETE-------------->
-    <!-------------------FOURTH (D) FRAME ANALYSIS START-------------->
-
-
- <!-------------BACKGROUND IMAGE AND STYLE ------------->
- <div class="simsubscreen" id="canvas1g" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
-
-
-
-    
-    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-2 ------------->
-    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
-        <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculations for Slab S-4</u></strong></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 25px;">1. Select the frame  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 50px;">2. Enter Depth of the slab  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 75px;">3. Enter imposed load (live load) on the slab  : </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 165px;"><strong><u>Maximum force at the centre of the trapezoidal slab </u></strong></p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 190px;">4. Enter total slab load calculated above  : </p>
-        <span style="position: absolute; left: 40px; top: 240px; font-size:17px; "><u><strong>Calculation for superimposed load of slab</strong></u></span>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 40px; top: 265px;">5. Enter above calculated <u>total load of slab </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 130px;">KN/m2</p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 190px;">KN/m</p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 715px; top: 272px;">KN/m</p>
-        <br> <br> <br> <br> <br>
-    
-        
-        <body>
-            <script src="./script.js"></script>
-            <section>
-                <form id="TSL4Form" onsubmit="return calcTSL4()">
-                    
-                            <select id="frame4" style="position: absolute; left: 390px; top: 30px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                                <option value=" ">select frame</option>
-                                <option value="frame 1">frame 1</option>
-                                <option value="frame 2">frame 2</option>
-                                <option value="frame 3">frame 3</option>
-                                <option value="frame 4">frame 4</option>
-                              </select>              
-                          <input type="number"  step="0.01" style="position: absolute; left: 390px; top: 60px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in m">
-                    <input type="number"  style="position: absolute; left: 390px; top: 90px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="in m">
-                 
-               
-                    <button type="submit5" style="position: absolute; left: 560px; top: 95px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn5">Calculate</button>
-                </form>
-                <output  style="position: absolute; left: 540px; top: 130px; width: 80px; padding-left:37px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" id="output12B" >0</output>
-            </section>
-            </body>
-            
-            <body>
-                <script src="./script.js"></script>
-                <section>
-                    <form id="baseshear" onsubmit="return calcTriangle2maxmiddleload()">
-                        
-                        <input type="number" id="totaltri2load" step="0.001" style="position: absolute; left: 370px; top: 198px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="in KN/m2">
-                     
-                   
-                        <button type="submit" style="position: absolute; left: 525px; top: 195px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn">Calculate</button>
-                    </form>
-                    <output  style="position: absolute; left: 635px; top: 190px; padding-left:37px; width: 80px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;"  id="output39" ></output>
-                </section>
-                </body>
-            
-            <body>
-            <script src="./script1.js"></script>
-            <section>
-                <form id="SuperimploadofslabDForm" onsubmit="return calcSuperimploadofslabD()">
-                    <input type="number" id="TSL4" step="0.01" style="position: absolute; left: 370px; top: 275px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder=" in KN/m2">
-            
-                 
-               
-                    <button type="submit12" style="position: absolute; left: 525px; top: 275px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn6" onclick="document.getElementById('hideNow4').style.display = 'block';">Calculate</button>
-                    <div id="hideNow4" style="display:none">
-                      
-                        <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1g()"></button></button>
-                      </div>
-                </form>
-                <output  style="position: absolute; left: 635px; top: 275px; width: 80px; padding-left:37px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output13" >0</output>
-            </section>
-        </body>
-                
-        </div>
-               
-    
-    
-    
-    <img src="images/2d_Short_2.png" style=
-    "   position: absolute;
-    left: 460px;
-    top: 325px;
-    
-    height: 230px;
-    width: 270px;
-       
-        "draggable="false"/>
-    
-    <div id="notepad5" style="position: absolute; top: 130px; width: 473px; left:5px; right:25px; height: 42px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Self Weight of Beam = Area x Depth of the beam x 25 (Unit Wt. of Concrete) =</span>
-        </div>
-        <div id="notepad6" style="position: absolute; top: 320px; width: 473px; left:5px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> [25 (Unit weight of concrete) * Depth of Slab] + 1 KN(Floor Finish Load) + Live load =</span>
-        </div>
-        <!--Blinking arrowcubox  -->
-
-</div>
-<!-- //////////////////////////////Scene 2B- ANALYSIS ///////////////////////--> 
-
-
- <!-------------BACKGROUND IMAGE AND STYLE ------------->
- <div class="simsubscreen" id="canvas1h" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
-
-    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-2 ------------->
-    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
-    
-        <span style="position: absolute; left: 40px; top: 5px; font-size:17px; "><u>Calculations for Beam-4
-
-        </u></span>
-    <span style="position: absolute; left: 40px; top: 130px; font-size:17px; "><u>Calculations for total imposed loads of the frame</u></span>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 150px;">1. Enter calculated superimposed of slab on beam: </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 180px;">2. Enter self weight of beam calculated above  : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 210px;">3. Enter self weight of columns   : </p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 240px;"><strong>Note:</strong> Calculate self weight (in KN) of columns by yourself. <br> <br>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 80px;">KN    </p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 620px; top: 275px;">KN/m    </p>
-        <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="beamDselfweightForm" onsubmit="return calcbeamDselfweight()">
-                <input id="beamlength1d" type="number"  step="0.001" style="position: absolute; left: 40px; top: 40px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam length in m">
-                <input id="beamwidth1d" type="number"  step="0.001" style="position: absolute; left: 220px; top: 40px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;"placeholder="Beam width in m">
-                <input id="beamdepth1d" type="number"  step="0.001" style="position: absolute; left: 400px; top: 40px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Beam depth in m">
-    
-           
-                <button type="submit13" style="position: absolute; left: 600px; top: 45px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn3">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 544px; padding-left:37px; top: 80px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output14" >0</output>
-        </section>
-        </body>
-    
-        <body>
-            <script src="./script.js"></script>
-            <section>
-                <form id="columnweightDForm" onsubmit="return calctotalimposedloadD()">
-                    <input id="beamload1d" type="number"  step="0.01" style="position: absolute; left: 430px; top: 160px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="columnselfweight1d">
-                    <input id="slabload1d" type="number"  style="position: absolute; left: 430px; top: 189px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="slabload1d">
-                    <input id="columnselfweight1d" type="number"  style="position: absolute; left: 430px; top: 220px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="beamload1d in cm">
-        
-               
-                    <button type="submit8" style="position: absolute; left: 600px; top: 210px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn4" onclick="document.getElementById('hideNow4a').style.display = 'block';">Calculate</button>
-                    <div id="hideNow4a" style="display:none">
-                          
-                        <button type="button" id="nextButton0" style="position:absolute; border-radius: 12px; left: 620px; top: 500px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Analyse frame 2&nbsp;" onclick="navNext1h()">Seismic Analysis</button>
-                        <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;visibility: show ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-                    </div>
-                </form>
-                <output  style="position: absolute; left: 544px; padding-left:37px; top: 275px; width: 80px; height: 40px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output15" >0</output>
-            </section>
-            </body>
-
-            <body>
-            <script src="./script.js"></script>
-        
-        <output  style="position: absolute; left: 380px; top: 370px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output4b" >L1= 0</output>            
-        <output  style="position: absolute; left: 520px; top: 370px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output8b" >L2= 0</output>            
-        <output  style="position: absolute; left: 380px; top: 430px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output12b" >L3= 0</output>            
-        <output  style="position: absolute; left: 520px; top: 430px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output15b" >L4= 0</output>            
-        
-</body>
-    
-               
-    </div>
-    <img src="images/2d_Short_2.png" style=
-    "   position: absolute;
-    left: 40px;
-    top: 325px;
-    
-    height: 230px;
-    width: 270px;
-       
-        "draggable="false"/>
-    
-    <div id="notepad3" style="position: absolute; top: 80px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Self Weight of Beam = Area x Depth of the beam x 25 (Unit Wt. of Concrete) =</span>
-        </div>
-        <div id="notepad4" style="position: absolute; top: 275px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> [25 (Unit weight of concrete) * Depth of Slab] + 1 KN(Floor Finish Load) + Live load =</span>
-        </div>
-    
-    <!--Blinking arrowcubox  -->
-
-</div>
-
-<!-------------------FOURTH (D) FRAME ANALYSIS COMPLETE-------------->
-<!-- //////////////////////////////Scene 2B- ANALYSIS ///////////////////////--> 
-
-
- <!-------------BACKGROUND IMAGE AND STYLE ------------->
- <div class="simsubscreen" id="canvas1i" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
-
-    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-2 ------------->
-    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
         <span style="position: absolute; left: 300px; top: 12px; font-size:20px; "><strong><u>Seismic Load Analysis</u></strong></span>
-            <span style="position: absolute; left: 70px; top: 43px; font-size:17px; "><u>Calculations for Beam</u></span>
-            <span style="position: absolute; left: 70px; top: 168px; font-size:17px; "><u>Calculations for Slab</u></span>
-            <span style="position: absolute; left: 70px; top: 225px; font-size:17px; "><u>Calculations for Columns</u></span>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 80px; top: 240px;"><strong>Note: Make summission of previously calculated self weight of all the 4 column divided by 2 <br>as half of the weight of the columns are considered for seismic load calculations</strong></p>
-            <span style="position: absolute; left: 70px; top: 300px; font-size:17px; "><u>Horizontal Seismic coeffecient (Ah)</u></span>
-            <span style="position: absolute; left: 70px; top: 375px; font-size:17px; "><u>Base Shear(F)</u></span>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 400px;">Enter values of above calculated <strong> total weight (W) </strong> of the building and <strong> (Ah)</strong></p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 133px; top: 70px;">KN    </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 248px; top: 70px;">KN    </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 363px; top: 70px;">KN    </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 478px; top: 70px;">KN    </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 723px; top: 190px;">KN    </p>
-            <p class="incanvas" style="font-size:15px; position: absolute; left: 683px; top: 435px;">KN    </p>
+            
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 80px; top: 70px;"><strong>Horizontal seismic cofficient (A<sub>H</sub>) =</strong></p>
+        <img src="images/Ah.png"   style=
+        "   position: absolute;
+            left: 350px;
+        top: 60px;
+        height: 50px;
+        width: 200px;
+        "draggable="false"/>
 
-
-            <output  style="position: absolute; left: 70px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output31" >B1= 0</output>            
-        <output  style="position: absolute; left: 185px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output23" >B2= 0</output>            
-        <output  style="position: absolute; left: 300px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output33" >B3= 0</output>            
-        <output  style="position: absolute; left: 415px; top: 76px; width: 70px; height: 30px; padding-top: 5px; padding-left: 30px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output34" >B4= 0</output>            
-
-        <br>
-        <body>
-        <script src="./script.js"></script>
-        <section>
-            <form id="beamDselfweightForm" onsubmit="return calctotalweightofsalb()">
-                <input type="number" id="lengthofslab" style="position: absolute; left: 70px; top: 195px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="Slab length (m)">
-                <input type="number" id="widthofslab" style="position: absolute; left: 230px; top: 195px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="Slab width (m)">
-                    <input type="number" id="thicknessofslab" style="position: absolute; left: 390px; top: 195px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.01" placeholder="Slab depth (m)">
-
-           
-                <button type="submit13" style="position: absolute; left: 550px; top: 195px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn3">Calculate</button>
-            </form>
-            <output  style="position: absolute; left: 660px; top: 195px; padding-left:32px; width: 70px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output35" >0</output>
-        </section>
-        </body>
         
-        <body>
-            <script src="./script1.js"></script>
-            <section>
-                <form id="horiAcclertnCoeff" onsubmit="return calchoriAcclertnCoeff()">
-                    <select input type="number" id="zonefactor" step="any" style="position: absolute; left: 80px; top: 325px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                        <option value=" " step="any">select seismic zone</option>
-                        <option value="10">0.10 for Zone 1 (low) </option>
-                        <option value="16">0.16 for Zone 2 (moderate)</option>
-                        <option value="24">0.24 for Zone 3 (severe)</option>
-                        <option value="36">0.10 for Zone 4 (very severe)</option>
-                      </select>
-                      <select input type="number" id="importancefactor" step="any" style="position: absolute; left: 240px; top: 325px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                        <option value=" " step="any">select type of building</option>
-                        <option value="1">All Buildings </option>
-                        <option value="1.5">Govt. Buildings</option>
-                      </select>
-                      <select input type="number" id="responcefactor" step="any" style="position: absolute; left: 400px; top: 325px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                        <option value=" " step="any">select type of frame</option>
-                        <option value="3">Ordinary MR Frames (3.0) </option>
-                        <option value="5">Special MR Frames (5.0)</option>
-                        <option value="5">Steel MR Frames (5.0)</option>
-                      </select>
-                      <select input type="number" id="SAGvalue" step="any" style="position: absolute; left: 560px; top: 325px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                        <option value=" " step="any">select type of soil</option>
-                        <option value="1">Soil type I (Hard) </option>
-                        <option value="1">Soil type II (Medium)</option>
-                        <option value="2">Soil type III (Soft)</option>
-                      </select>
-                      
-                     
+           
+        <section>
+                <select input type="number" id="frame" step="any" style="position: absolute; left: 20px; top: 120px; width: 50px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
+                    <option value=" " step="any">select seismic zone</option>
+                    <option value="1">Frame 1</option>
+                    
+                  </select>
+                <select input type="number" id="zonefactor" step="any" style="position: absolute; left: 80px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
+                    <option value=" " step="any">select seismic zone</option>
+                    <option value="10">0.10 for Zone 1 (low) </option>
+                    <option value="16">0.16 for Zone 2 (moderate)</option>
+                    <option value="24">0.24 for Zone 3 (severe)</option>
+                    <option value="36">0.10 for Zone 4 (very severe)</option>
+                  </select>
+                  <select input type="number" id="importancefactor" step="any" style="position: absolute; left: 240px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
+                    <option value=" " step="any">select type of building</option>
+                    <option value="1">All Buildings </option>
+                    <option value="1.5">Govt. Buildings</option>
+                  </select>
+                  <select input type="number" id="responcefactor" step="any" style="position: absolute; left: 400px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
+                    <option value=" " step="any">select type of frame</option>
+                    <option value="3">Ordinary MR Frames (3.0) </option>
+                    <option value="5">Special MR Frames (5.0)</option>
+                    <option value="5">Steel MR Frames (5.0)</option>
+                  </select>
+                  <select input type="number" id="SAGvalue" step="any" style="position: absolute; left: 560px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
+                    <option value=" " step="any">select type of soil</option>
+                    <option value="1">Soil type I (Hard) </option>
+                    <option value="1">Soil type II (Medium)</option>
+                    <option value="2">Soil type III (Soft)</option>
+                  </select>
+                  
                  
-               
-                    <button type="submit2" style="position: absolute; left: 490px; top: 355px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn2">Calculate</button>
+           
+        <br>
+       
+                    <button type="submit2" id="button10" style="position: absolute; left: 350px; top: 150px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="Ah()">Calculate</button>
                 </form>
-                <output  style="position: absolute; left: 600px; padding-left:32px; top: 355px; width: 70px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;" step="0.01" id="output21" >0</output>
+                <span style="position: absolute; left: 460px; top: 153px; font-size:17px; ">A<sub>h</sub> = </span>
+
+                <output id="horiAcclertnCoeff" style="position: absolute; left: 500px; padding-left:1px; top: 150px; text-align: center; width: 85px; height: 35px; padding-top: 5px; padding-bottom: 3px; background-color: #4c4b4b; color: #FFF;" step="0.01"  ></output>
+                <output  class= "output-wrong4a" id="wrong4a"style="position: absolute; left: 100px;  top: 215px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;" ></output> 
+
             </section>
     </body>
 
-    <script src="./script.js"></script>
-    <section>
-        <form id="baseshear" onsubmit="return calcbaseshear()">
+
+    <span id="text25" style="position: absolute; left: 70px; top: 190px; font-size:17px;color: #1000a1; "><Strong><u>Base Shear</u>(F) = A<sub>h</sub> x (total structure load)</Strong></span>
+    <span id="text26"style="position: absolute; left: 70px; top: 220px; font-size:17px; ">Note: For seismic analysis half of the self weight of the columns is considered</span>
+    <p id="text27" class="incanvas" style="font-size:15px; position: absolute; left: 30px; top: 280px;">Enter values of previously calculated <strong> total weight (W) </strong> of the structure transfered to the foundation and <strong> (Ah)</strong></p>
+
+   
             
-            <input type="number" id="finalloadW" step="0.001" style="position: absolute; left: 80px; top: 440px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="W in KN">
-            <input type="number" id="horiacclerationcoeff" style="position: absolute; left: 290px; top: 440px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.001" placeholder=" Value for Ah">
+            <input type="number" id="finalloadW" step="0.001" style="position: absolute; left: 80px; top: 250px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="W in KN">
+            <input type="number" id="horiacclerationcoeff" style="position: absolute; left: 290px; top: 250px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.001" placeholder=" Value for Ah">
          
        
-            <button type="submit" style="position: absolute; left: 500px; top: 440px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" id="submitBtn" onclick="document.getElementById('hideNow5').style.display = 'block';">Calculate</button>
-            <div id="hideNow5" style="display:none">
-                      
-                <button class="fa fa-hand-o-right" id="nextButton1" style=" color: rgb(119, 119, 121); position:absolute; left:710px; top:500px; font-size: 35px; "onclick="navNext1i()"></button>>Button 3</button>
-              </div>
-        </form>
-        <output  style="position: absolute; left: 620px; padding-left:32px; top: 440px; width: 70px; height: 35px; padding-top: 5px; padding-bottom: 5px; background-color: #4c4b4b; color: #FFF;"  id="output22" >
-        </output>
-    </section>
+            <button type="submit" id="button9" style="position: absolute; left: 500px; top: 245px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="calcbaseshear()">Calculate</button>
+            <output  class="output-baseshear" id="baseshear" style="position: absolute; text-align: center; left: 620px; top: 250px; width: 62px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
+
+        <output  class= "output-wrong4b" id="wrong4b"style="position: absolute; left: 150px;  top: 310px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;" ></output> 
+
     </body>
+    <img src="images/EQ1.png"  id="stand_img1" style=
+    "   position: absolute;
+        left: 20px;
+    top: 320px;
+    height: 240px;
+    width: 310px;
+    "draggable="false"/>
+
+<img src="images/EQ2.png"  id="stand_img2" style=
+"   position: absolute;
+    left: 390px;
+    top: 320px;
+    height: 240px;
+    width: 310px;
+"draggable="false"/>
 
     </div>
-    <div id="notepad4" style="position: absolute; top: 120px; width: 473px; left:20px; right:25px; height: 40px; border: 1px solid #000; background-color: #4c4b4b;  margin-left: 50px; margin-right: 50px;">
-        <span class="incanvas" style="font-size:12px; position: absolute; top: 0px; left: 0px; text-align: justify; color: #FFF; "> Make sumission of the self weight of all the beams calculated (stated above) in KN  </span>
-        </div>
+    
 
     </div>
+
 
     <!-------------------FOURTH (D) FRAME ANALYSIS COMPLETE-------------->
 <!-- //////////////////////////////Scene 2B- ANALYSIS ///////////////////////--> 
@@ -1465,7 +539,9 @@ top: 100px;
 height: 320px;
 width: 340px;
 "draggable="false"/>
-    
+
+    <button class="fa fa-hand-o-right" id="nextButton4" style=" color: rgb(119, 119, 121); position:absolute; left:700px; height: 40px; width: 70px; top:510px; font-size: 35px; "onclick="navNext1f()"></button>
+
     <!--- First Div----> 
     
 </td></tr>
