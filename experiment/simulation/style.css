@@ -39,7 +39,7 @@ html
 {
 	/**/
 	border: 2px solid #666666;
-	background-color: #FFF;
+	background-image: linear-gradient(rgb(214, 232, 245), rgb(249, 213, 213));
 	border-radius: 20px;
 	top:300px;
 }
@@ -165,6 +165,45 @@ font-size: 20px;
 
 
 #nextButton
+
+{
+
+	position:absolute;
+
+	left:750px;
+
+	top:530px;
+
+	cursor:pointer;
+
+}
+#nextButton1
+
+{
+
+	position:absolute;
+
+	left:750px;
+
+	top:530px;
+
+	cursor:pointer;
+
+}
+#nextButton2
+
+{
+
+	position:absolute;
+
+	left:750px;
+
+	top:530px;
+
+	cursor:pointer;
+
+}
+#nextButton3
 
 {
 
