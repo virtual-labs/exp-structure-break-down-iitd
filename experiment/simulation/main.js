@@ -6,26 +6,27 @@ function totslabload1() {
   // Check if input1 is 4 and input2 is 1
   if (DL1 == 3.75 && LL1 == 4) { 
     // Slowly display the text after 2 seconds
-    setTimeout(function() {
+    setTimeout(function() { 
+      document.getElementById("wrong1a").style.visibility="hidden";
+
+    }, 1);
+      setTimeout(function() {
       document.getElementById("Totalload1").innerHTML = "8.75 KN/m<sup>2</sup>";
       document.getElementById("Totalload2").innerHTML = "8.75 KN/m<sup>2</sup>";
-      document.getElementById("wrong1a").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("text1").style.visibility="visible";
       document.getElementById("text2").style.visibility="visible";
       document.getElementById("text3").style.visibility="visible";
       document.getElementById("text4").style.visibility="visible";
-
       document.getElementById("Area1").style.visibility="visible";
       document.getElementById("TL1").style.visibility="visible";
       document.getElementById("button2").style.visibility="visible";
-    
+
 
     }, 1200);
-    
-    document.getElementById("Totalload1").style.display = "block"; 
 
+    document.getElementById("Totalload1").style.display = "block"; 
     document.getElementById("text1").style.display = "block"; 
     document.getElementById("text2").style.display = "block"; 
     document.getElementById("text3").style.display = "block"; 
@@ -33,7 +34,7 @@ function totslabload1() {
     document.getElementById("Area1").style.display = "block"; 
     document.getElementById("TL1").style.display = "block"; 
     document.getElementById("button2").style.display = "block"; 
-    
+
 
     }
 
@@ -65,9 +66,12 @@ function tottrapload1() {
   // Check if input1 is 4 and input2 is 1
   if (Area1 == 5.25 && TL1 == 8.75) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong1b").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("outputtrapload").innerHTML = "45.93 KN";
-      document.getElementById("wrong1b").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("text5").style.visibility="visible";
@@ -87,7 +91,7 @@ function tottrapload1() {
     document.getElementById("text7").style.display = "block"; 
     document.getElementById("text8").style.display = "block"; 
     document.getElementById("button3").style.display = "block"; 
-    
+
 
     }
 
@@ -115,11 +119,14 @@ function trapimposedload1() {
   const inputtrapload = document.getElementById("inputtrapload").value;
 
   // Check if input1 is 4 and input2 is 1
-  if (inputtrapload == 4.93 ) { 
+  if (inputtrapload == 45.93 ) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong1c").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("output-superimposed1a").innerHTML = "9.81 KN/m";
-      document.getElementById("wrong1c").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("text8").style.visibility="visible";
@@ -134,6 +141,7 @@ function trapimposedload1() {
     document.getElementById("output-superimposed1b").style.display = "block"; 
     document.getElementById("wrong1c").style.display = "block"; 
     document.getElementById("nextButton1").style.display = "block"; 
+    document.getElementById("wrong1c").style.visibility="block";
 
 
     }
@@ -167,9 +175,12 @@ function tottriload2() {
   // Check if input1 is 4 and input2 is 1
   if (Area2 == 2.25 && TL2 == 8.75) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong2b").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("outputtriload").innerHTML = "19.68 KN";
-      document.getElementById("wrong2b").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("text13").style.visibility="visible";
@@ -189,6 +200,7 @@ function tottriload2() {
     document.getElementById("text15").style.display = "block"; 
     document.getElementById("button6").style.display = "block"; 
     document.getElementById("wrong2b").style.display = "block"; 
+    document.getElementById("wrong2b").style.visibility="block";
 
 
     }
@@ -219,9 +231,12 @@ function triimposedload2() {
   // Check if input1 is 4 and input2 is 1
   if (inputtriload == 45.93 ) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong2c").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("output-superimposed2a").innerHTML = "6.56 KN/m";
-      document.getElementById("wrong2c").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("text16").style.visibility="visible";
@@ -268,9 +283,12 @@ function beamselfwt1() {
   // Check if input1 is 4 and input2 is 1
   if (longerbeamlength1 == 5 && longerbeamwidth1 == 0.3 && longerbeamdepth1 == 0.3) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong3a").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("longerbeam1selfwt").innerHTML = "11.25 KN";
-      document.getElementById("wrong3a").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("longerbeam2selfwt").innerHTML ="11.25 KN";
@@ -331,9 +349,12 @@ function beamselfwt2() {
   // Check if input1 is 4 and input2 is 1
   if (shorterbeam1length == 1 && shorterbeam1width == 1 && shorterbeam1depth == 1) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong3b").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("shorterbeam1selfwt").innerHTML = "6.75 KN";
-      document.getElementById("wrong3b").style.visibility="hidden";
     }, 800);
     setTimeout(function() {
       document.getElementById("shorterbeam2selfwt").innerHTML ="2";
@@ -393,9 +414,12 @@ function Ah() {
   // Check if input1 is 4 and input2 is 1
   if (frame == 1 ) { 
     // Slowly display the text after 2 seconds
+    setTimeout(function() { 
+      document.getElementById("wrong4a").style.visibility="hidden";
+
+    }, 1);
     setTimeout(function() {
       document.getElementById("horiAcclertnCoeff").innerHTML = (((zonefactor)/100)/2) * (((importancefactor) / (responcefactor)) * ((SAGvalue))) ;
-      document.getElementById("wrong4a").style.visibility="hidden";
       document.getElementById("text26").style.visibility="visible";
       document.getElementById("text25").style.visibility="visible";
       document.getElementById("text27").style.visibility="visible";
@@ -455,6 +479,7 @@ function calcbaseshear() {
     document.getElementById("baseshear").style.display = "block"; 
     document.getElementById("stand_img1").style.display = "block"; 
     document.getElementById("stand_img2").style.display = "block"; 
+    document.getElementById("wrong4b").style.visibility="block";
 
     }
 
@@ -509,9 +534,9 @@ document.getElementById("TL1").style.visibility="hidden";
 document.getElementById("inputtrapload").style.visibility="hidden";
 document.getElementById("button3").style.visibility="hidden";
 document.getElementById("button2").style.visibility="hidden";
-document.getElementById("wrong1a").style.visibility="hidden";
-document.getElementById("wrong1b").style.visibility="hidden";
-document.getElementById("wrong1c").style.visibility="hidden";
+document.getElementById("wrong1a").style.visibility="visible";
+document.getElementById("wrong1b").style.visibility="visible";
+document.getElementById("wrong1c").style.visibility="visible";
 document.getElementById("nextButton1").style.visibility="hidden";
 
 
@@ -530,8 +555,8 @@ document.getElementById("text16").style.visibility="hidden";
 
 document.getElementById("inputtriload").style.visibility="hidden";
 document.getElementById("button6").style.visibility="hidden";
-document.getElementById("wrong2b").style.visibility="hidden";
-document.getElementById("wrong2c").style.visibility="hidden";
+document.getElementById("wrong2b").style.visibility="visible";
+document.getElementById("wrong2c").style.visibility="visible";
 document.getElementById("nextButton2").style.visibility="hidden";
 
 
@@ -557,8 +582,8 @@ document.getElementById("button8").style.visibility="hidden";
 document.getElementById("shorterbeam1length").style.visibility="hidden";
 document.getElementById("shorterbeam1width").style.visibility="hidden";
 document.getElementById("shorterbeam1depth").style.visibility="hidden";
-document.getElementById("wrong3a").style.visibility="hidden";
-document.getElementById("wrong3b").style.visibility="hidden";
+document.getElementById("wrong3a").style.visibility="visible";
+document.getElementById("wrong3b").style.visibility="visible";
 document.getElementById("nextButton3").style.visibility="hidden";
 
 
@@ -578,7 +603,7 @@ document.getElementById("button9").style.visibility="hidden";
 document.getElementById("stand_img1").style.visibility="hidden";
 document.getElementById("stand_img2").style.visibility="hidden";
 
-document.getElementById("wrong4a").style.visibility="hidden";
+document.getElementById("wrong4a").style.visibility="visible";
 
 
 }
