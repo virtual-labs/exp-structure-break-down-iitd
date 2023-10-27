@@ -347,7 +347,7 @@ function beamselfwt2() {
 
 
   // Check if input1 is 4 and input2 is 1
-  if (shorterbeam1length == 1 && shorterbeam1width == 1 && shorterbeam1depth == 1) { 
+  if (shorterbeam1length == 3 && shorterbeam1width == 0.3 && shorterbeam1depth == 0.3) { 
     // Slowly display the text after 2 seconds
     setTimeout(function() { 
       document.getElementById("wrong3b").style.visibility="hidden";
