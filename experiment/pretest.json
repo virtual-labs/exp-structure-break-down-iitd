@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [{
+      "question": "1. Which IS code is used for seismic design  of the structure?",
+      "answers": {
+        "a": "IS 1893 (Part 1)",
+        "b": "IS 456-2000",
+        "c": "IS 875 (Part 1)",
+        "d": "IS 875 (Part 3)"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The density of concrete in (KN/m3) is _________",
+      "answers": {
+        "a": "20",
+        "b": "25",
+        "c": "24",
+        "d": "30"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Following load combinations are not recommended by IS 456 (2000). ",
+      "answers": {
+        "a": "(DL + IL) 1.5",
+        "b": "(DL + IL + EL) 1.5",
+        "c": "1.2 (DL + IL + EL)",
+        "d": "1.5 (DL + EL)"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which IS code is used for imposed load calculations structure?",
+      "answers": {
+        "a": "IS 875 Part II (1987)",
+        "b": "IS 456-2000",
+        "c": "IS 800-2008",
+        "d": "Non of the above"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+    
+  ]
+}
