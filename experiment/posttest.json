@@ -1,0 +1,76 @@
+{
+  "version": 2.0,
+  "questions": [{
+      "question": "1. For the structure considered, A column is part of how many frames?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "1",
+        "d": "4"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is the load path in the considered structure?",
+      "answers": {
+        "a": "Slab → Beam → Column → Footing",
+        "b": "Beam → Column → Footing",
+        "c": "Beams → Footing",
+        "d": "Non of the above"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The value of zone factor (z) considered for zone IV is _______ .",
+      "answers": {
+        "a": "0.10",
+        "b": "0.24",
+        "c": "0.36",
+        "d": "0.16"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "4. How is the self weight of the columns and walls lumped to the floors",
+      "answers": {
+        "a": "Equally divided among the floors containing the column element",
+        "b": "Only lower floor",
+        "c": "Only upper floor",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "moderate"
+    }
+    
+    
+   
+  ]
+}
