@@ -3,35 +3,29 @@
 
 1. Click on start experiment button to start the experiment.
 
+<img src="images/1a.png"/>
+
+Step-1: (a) Click on 'Split' button to split the 3D frame into 2D .
+
+<img src="images/1b.png"/>
+
+Step-1: (b) Click on 'Start Analysis' button to initiate the analysis.
+
+<img src="images/1c.png"/>
+
+Step-2: Calculation of slab load for trapezoidal and triangular section.
+
 <img src="images/1.png"/>
 
-Step-1: (a) Click on 'Bring' button to bring the 3D frame .
+Step-3: Calculation of self weight of beams and columns.
 
 <img src="images/2.png"/>
 
-Step-1: (b) Click on 'Split' button to split the 3D frame into 2D.
+Step-3: Calculation for seismic load analysis. 
 
 <img src="images/3.png"/>
 
-Step-1: (c) Click on 'start analysis' button to start the analysis of the 2D frames.
 
-<img src="images/4.png"/>
-
-Step-2: (a) Perform the calculations for 2D frame 'A'.
-
-<img src="images/5.png"/>
-
-Step-3: Click on 'Analyse Frame 2' button to perform calculation for 2D frame 2 & similarly carry out the same procedure for frame 3 & 4. 
-
-<img src="images/6.png"/>
-
-Step-4: (a) Click on 'Seismic Analysis' button to carry out Seismic Load Analysis of the Frame.
-
-<img src="images/7.png"/>
-
-Step-4: (b) Carry out Seismic load Analysis and determine the Base Shear.
-
-<img src="images/8.png"/>
 
 
 
