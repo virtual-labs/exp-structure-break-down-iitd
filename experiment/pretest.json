@@ -31,7 +31,7 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
@@ -57,7 +57,7 @@
         "a": "IS 875 Part II (1987)",
         "b": "IS 456-2000",
         "c": "IS 800-2008",
-        "d": "Non of the above"
+        "d": "None of the above"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",

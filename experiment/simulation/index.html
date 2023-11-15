@@ -75,8 +75,8 @@
 
 <!-- ////////////////////////////////////EQUIPMENT IMAGES AND STYLING/////////////////////// -->
 <p class="incanvas" style="font-size:15px; position: absolute; left: 420px; top: 200px;"><strong><u></u>Measurement of Slab</u></strong><br>Thickness of Slab = 0.15m</p>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 420px; top: 260px;"><strong><u>Measurements of Beam</u></strong><br>Width = 0.3m<br>Depth (Thickness) = 0.3m<br></p>
-        <p class="incanvas" style="font-size:15px; position: absolute; left: 420px; top: 350px;"><strong><u>Measurements of Columns</u></strong><br>Length = 3m <br>Width = 0.3m<br>Thickness = 0.3m</p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 420px; top: 260px;"><strong><u>Measurements of Beam</u></strong><br>Width = 0.3m<br>Depth (Thickness) = 0.3m<br>Length = B1 = B3 = 5m, B2 = B4 = 3m</p>
+        <p class="incanvas" style="font-size:15px; position: absolute; left: 420px; top: 350px;"><strong><u>Measurements of Columns</u></strong><br>Length = 3.5m <br>Width = 0.4m<br>Thickness = 0.4m</p>
         <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 460px;"><strong><u>Note:</u> Please keep paper, pen and calculator with you while performing the simulation.</strong> </p>
 
 
@@ -93,7 +93,7 @@
 <!-- //////////////////////////////////START EXPERIMENT BUTTON//////////////////////////////////////////// -->
  <!--Blinking arrowcubox  -->
     <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 565px; top: 495px; color: #2150a0;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-<input type="button" id="nextButton0" style="position:absolute; left: 605px; top: 500px; cursor:pointer; font-size: 15px; background-color: #67726b; border-radius: 12px; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext0()"/>
+<input type="button" id="nextButton0" style="position:absolute; left: 605px; top: 500px; cursor:pointer; font-size: 15px; background-color: #67726b; border-radius: 12px; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1c()"/>
 
 </div>
 <!-- ///////////////////////////Intro Page complete//////////////////////////////--> 
@@ -231,26 +231,26 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
 <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
 
     <span style="position: absolute; left: 30px; top: 5px; font-size:17px; "><strong><u>Calculations for Slab S-1</u></strong></span>
-    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 25px;">Thickness of Slab (t) = 0.15m, Imposed Load (IL)= 4KN/m<sup>2</sup> & Dead Load (DL) = 4.75KN/m<sup>2</sup> </p>
+    <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 25px;">Thickness of Slab (t) = 0.15m, Imposed Load (IL)= 4kN/m<sup>2</sup> & Dead Load (DL) = 4.75kN/m<sup>2</sup> </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 50px;"><strong>1. Load per unit area of the slab</strong> </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 75px; color: #1000a1;">[DL + Imposed Load] </p>
     <p class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 105px;">[ &emsp;&emsp;&nbsp;&nbsp; + &emsp;&emsp;&nbsp;&nbsp; ] =  </p>
     <input type="text" id="DL1" style="position: absolute; text-align: center; left: 36px; top: 115px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
     <input type="text" id="LL1" style="position: absolute; text-align: center; left: 90px; top: 115px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
     <output            id="Totalload1"  style="position: absolute;  left: 175px; top: 115px; width: 85px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
-    <button id="button1" style="position: absolute; left: 320px; top: 115px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="totslabload1()">Calc. </button>
+    <button id="button1" style="position: absolute; left: 320px; top: 115px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="totslabload1()">Solve </button>
     <output  class= "output-wrong1a" id="wrong1a" style="position: absolute; left: 100px;  top: 145px; width: 280px; height: 55px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
 
     <p class="incanvas" id="text1" style="font-size:15px; position: absolute; left: 20px; top: 145px;"><Strong>2. Now load of trapezoidal section of the slab (APQB) acting on beam B<sub>1</sub></Strong> </p>
     <p class="incanvas" id="text2" style="font-size:15px; position: absolute; left: 20px; top: 175px; color: #1000a1;"><Strong>Area of the trapezoidal section x Total load</Strong> </p>
-    <p class="incanvas" id="text3" style="font-size:15px; position: absolute; left: 20px; top: 205px; color: #1000a1;"><Strong>1 / 2 [ (l<sub>X</sub> x l<sub>Y</sub>) - (l<sub>X</sub><sup>2</sup> / 2) ] x [ load per unit area of slab]</Strong> </p>
+    <p class="incanvas" id="text3" style="font-size:15px; position: absolute; left: 20px; top: 205px; color: #1000a1;"><Strong>1 / 2 [ (l<sub>1</sub> + l<sub>2</sub>) - (l<sub>1</sub><sup>2</sup> / 2) ] x [ load per unit area of slab]</Strong> </p>
     <p class="incanvas" id="text4" style="font-size:15px; position: absolute; left: 20px; top: 235px;">[ &emsp;&emsp;&nbsp;&nbsp; x &emsp;&emsp;&nbsp;&nbsp; ] =</p>
     <input type="text" id="Area1"style="position: absolute; text-align: center; left: 36px; top: 245px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
     <input type="text" id="TL1" style="position: absolute; text-align: center; left: 88px; top: 245px; height: 25px; width: 40px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; padding-left: 2px;" ><br>
     <output  class="output-trapload" id="outputtrapload" style="position: absolute; text-align: center; left: 150px; top: 245px; width: 85px; height: 25px; border: 1px solid #000; padding-top: 1px; padding-bottom: 1px; padding-right:1px; padding-left:2px;  background-color: #ffffff; color: #1000a1; display: none; display: none;" ></output> 
     <button id="button2" style="position: absolute; left: 320px; top: 245px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick=" tottrapload1()">Calc. </button>
     <output  class= "output-wrong1b" id="wrong1b" style="position: absolute; left: 100px;  top: 275px; width: 280px; height: 55px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
-    <p class="incanvas" id="text5" style="font-size:15px; position: absolute; left: 20px; top: 270px;">Similarly load acting on Beam B<sub>3</sub> = <strong>45.93 KN</strong> </p>
+    <p class="incanvas" id="text5" style="font-size:15px; position: absolute; left: 20px; top: 270px;">Similarly load acting on Beam B<sub>3</sub> = <strong>45.93 kN</strong> </p>
 
     <p class="incanvas" id="text7"style="font-size:15px; position: absolute; left: 20px; top: 300px; color: #1000a1; ">Now load of triangular section of the slab (APD) acting on beam B<sub>2</sub></p>
     <p class="incanvas" id="text8"style="font-size:15px; position: absolute; left: 20px; top: 330px; color: #1000a1; "><Strong>Area of the triangular section x Total load = [l<sub>X</sub> ( l<sub>X</sub> / 2) / 2]  x [ Total load ]</Strong></p>
@@ -261,7 +261,7 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
     <button id="button3" style="position: absolute; left: 320px; top: 370px; width: 60px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="tottriload2()">Calc. </button>
     <output  class= "output-wrong2b" id="wrong2b" style="position: absolute; left: 100px;  top: 400px; width: 270px; height: 75px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;"   id="wrong1a"></output> 
     
-    <p class="incanvas" id="text10" style="font-size:15px; position: absolute; left: 20px; top: 410px;"><Strong>Similarly load acting on Beam B<sub>4</sub>  = <strong>19.68 KN</strong> </Strong> </p>
+    <p class="incanvas" id="text10" style="font-size:15px; position: absolute; left: 20px; top: 410px;"><Strong>Similarly load acting on Beam B<sub>4</sub>  = <strong>19.68 kN</strong> </Strong> </p>
 
 
 
@@ -336,10 +336,10 @@ style=
 
         <span id="text20"style="position: absolute; left: 30px; top: 255px; font-size:17px; "><strong><u>Calculation of self weight of columns</u></strong></span>
         <p id="text21" class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 280px;"><strong>Self weight of the column C<sub>1</sub> to C<sub>4</sub> = Volume (l<sub>c</sub> x width x thickness) x 25.</strong> </p>
-        <p id="text22" class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 315px;color: #1000a1;">[ 3.5 x 0.4 x 0.4 ] x 25 = 5.4KN</p>
-        <p id="text23"class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 345px;">Similarly the self weight of column C<sub>2</sub>, C<sub>3</sub>& C<sub>4</sub> = 5.4 KN. <br><strong>Note:</strong> Total load imposed on each beam = Self weight of beam + slab load<br></p>
+        <p id="text22" class="incanvas" style="font-size:15px; position: absolute; left: 50px; top: 315px;color: #1000a1;">[ 3.5 x 0.4 x 0.4 ] x 25 = 14kN</p>
+        <p id="text23"class="incanvas" style="font-size:15px; position: absolute; left: 20px; top: 345px;">Similarly the self weight of column C<sub>2</sub>, C<sub>3</sub>& C<sub>4</sub> = 14 kN. <br><strong>Note:</strong> Total load imposed on each beam = Self weight of beam + slab load<br></p>
 
-        <span id="text24" style="position: absolute; left: 30px; top: 405px; font-size:17px; "><strong><u>Now Calculate yourself the total load transfered to the footing of each column</u></span>
+        <span id="text24" style="position: absolute; left: 30px; top: 405px; font-size:17px; "><strong><u>Now Calculate the total load transfered to the footing of each column</u></span>
             <span id="text24a" style="position: absolute; left: 113px; top: 435px; font-size:17px; "><strong>(B<sub>1</sub> + B<sub>2</sub>)</span>
 
             <span id="text24b" style="position: absolute; left: 70px; top: 442px; font-size:17px; "><strong>Hint: _________ + C<sub>1</sub></span>
@@ -407,8 +407,8 @@ style=
                   </select>
                   <select input type="number" id="importancefactor" step="any" style="position: absolute; left: 240px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
                     <option value=" " step="any">select type of building</option>
-                    <option value="1">All Buildings </option>
-                    <option value="1.5">Govt. Buildings</option>
+                    <option value="1">All Buildings (1) </option>
+                    <option value="1.5">Important Buildings (1.5)</option>
                   </select>
                   <select input type="number" id="responcefactor" step="any" style="position: absolute; left: 400px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
                     <option value=" " step="any">select type of frame</option>
@@ -416,13 +416,9 @@ style=
                     <option value="5">Special MR Frames (5.0)</option>
                     <option value="5">Steel MR Frames (5.0)</option>
                   </select>
-                  <select input type="number" id="SAGvalue" step="any" style="position: absolute; left: 560px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="Select Frame" >
-                    <option value=" " step="any">select type of soil</option>
-                    <option value="1">Soil type I (Hard) </option>
-                    <option value="1">Soil type II (Medium)</option>
-                    <option value="2">Soil type III (Soft)</option>
-                  </select>
-                  
+                  <input type="text" id="SAGvalue" step="any" placeholder="Sa/G " style="position: absolute; left: 560px; top: 120px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" ><br>
+
+                 
                  
            
         <br>
@@ -444,7 +440,7 @@ style=
 
    
             
-            <input type="number" id="finalloadW" step="0.001" style="position: absolute; left: 80px; top: 250px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="W in KN">
+            <input type="number" id="finalloadW" step="0.001" style="position: absolute; left: 80px; top: 250px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" placeholder="W in kN">
             <input type="number" id="horiacclerationcoeff" style="position: absolute; left: 290px; top: 250px; width: 190px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;" step="0.001" placeholder=" Value for Ah">
          
        
@@ -454,6 +450,20 @@ style=
         <output  class= "output-wrong4b" id="wrong4b"style="position: absolute; left: 150px;  top: 310px; width: 270px; height: 40px; border-radius: 12px;border: 1px solid #000; padding-top: 8px; padding-bottom: 2px;  padding-right:3px; padding-left:3px;  background-color: #4c4b4b; color: #FFF; display: none;" ></output> 
 
     </body>
+    <img src="images/Timeperiod.png"  id="stand_img1a" style=
+    "   position: absolute;
+        left: 20px;
+    top: 320px;
+    height: 150px;
+    width: 250px;
+    "draggable="false"/>
+    <img src="images/Sa-G.png"  id="stand_img2a" style=
+    "   position: absolute;
+        left: 320px;
+        top: 280px;
+        height: 240px;
+        width: 420px;
+    "draggable="false"/>
     <img src="images/EQ1.png"  id="stand_img1" style=
     "   position: absolute;
         left: 20px;

@@ -23,7 +23,7 @@
         "a": "Slab → Beam → Column → Footing",
         "b": "Beam → Column → Footing",
         "c": "Beams → Footing",
-        "d": "Non of the above"
+        "d": "None of the above"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
