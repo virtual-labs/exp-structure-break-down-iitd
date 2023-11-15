@@ -11,8 +11,8 @@ function totslabload1() {
 
     }, 1);
       setTimeout(function() {
-      document.getElementById("Totalload1").innerHTML = "8.75 KN/m<sup>2</sup>";
-      document.getElementById("Totalload2").innerHTML = "8.75 KN/m<sup>2</sup>";
+      document.getElementById("Totalload1").innerHTML = "8.75 kN/m<sup>2</sup>";
+      document.getElementById("Totalload2").innerHTML = "8.75 kN/m<sup>2</sup>";
     }, 800);
     setTimeout(function() {
       document.getElementById("text1").style.visibility="visible";
@@ -50,7 +50,7 @@ function totslabload1() {
   } else {
     // Display an error message
     setTimeout(function() {
-   document.getElementById("wrong1a").innerHTML = "Wrong Input. DL = (25 x thiskness of slab) = 4.75KN/m<sup>2</sup> & LL = 4 KN/m<sup>2</sup>";
+   document.getElementById("wrong1a").innerHTML = "Wrong Input. DL = (25 x thiskness of slab) = 4.75kN/m<sup>2</sup> & LL = 4 kN/m<sup>2</sup>";
   }, 1000);
    document.getElementById("wrong1a").style.display = "block";
   }
@@ -71,7 +71,7 @@ function tottrapload1() {
 
     }, 1);
     setTimeout(function() {
-      document.getElementById("outputtrapload").innerHTML = "45.93 KN";
+      document.getElementById("outputtrapload").innerHTML = "45.93 kN";
     }, 800);
     setTimeout(function() {
       document.getElementById("img_short").style.visibility="visible";
@@ -118,7 +118,7 @@ function tottrapload1() {
   } else {
     // Display an error message
     setTimeout(function() {
-   document.getElementById("wrong1b").innerHTML = "Wrong Input.Area of trapezoid (APQB) = 5.25m<sup>2</sup> & load per unit area = 8.75KN/m<sup>2</sup>";
+   document.getElementById("wrong1b").innerHTML = "Wrong Input.Area of trapezoid (APQB) = 5.25m<sup>2</sup> & load per unit area = 8.75kN/m<sup>2</sup>";
   }, 1000);
    document.getElementById("wrong1b").style.display = "block";
   }
@@ -138,7 +138,7 @@ function tottriload2() {
 
     }, 1);
     setTimeout(function() {
-      document.getElementById("outputtriload").innerHTML = "19.68 KN";
+      document.getElementById("outputtriload").innerHTML = "19.68 kN";
     }, 800);
     setTimeout(function() {
       document.getElementById("nextButton1").style.visibility="visible";
@@ -174,7 +174,7 @@ function tottriload2() {
   } else {
     // Display an error message
     setTimeout(function() {
-   document.getElementById("wrong2b").innerHTML = "Wrong Input. Area of triangular slab (APD) = 2.25m<sup>2</sup> & load per unit area = 8.75KN/m<sup>2</sup>";
+   document.getElementById("wrong2b").innerHTML = "Wrong Input. Area of triangular slab (APD) = 2.25m<sup>2</sup> & load per unit area = 8.75kN/m<sup>2</sup>";
   }, 1000);
    document.getElementById("wrong2b").style.display = "block";
   }
@@ -193,11 +193,11 @@ function triimposedload2() {
 
     }, 1);
     setTimeout(function() {
-      document.getElementById("output-superimposed2a").innerHTML = "6.56 KN/m";
+      document.getElementById("output-superimposed2a").innerHTML = "6.56 kN/m";
     }, 800);
     setTimeout(function() {
       document.getElementById("text16").style.visibility="visible";
-      document.getElementById("output-superimposed2b").innerHTML ="6.56 KN/m";
+      document.getElementById("output-superimposed2b").innerHTML ="6.56 kN/m";
       document.getElementById("nextButton2").style.visibility="visible";
 
     }, 1200);
@@ -222,7 +222,7 @@ function triimposedload2() {
   } else {
     // Display an error message
     setTimeout(function() {
-   document.getElementById("wrong2c").innerHTML = "Wrong Input. Total load of triangle section = 45.93 KN";
+   document.getElementById("wrong2c").innerHTML = "Wrong Input. Total load of triangle section = 45.93 kN";
   }, 1000);
    document.getElementById("wrong2c").style.display = "block";
   }
@@ -244,7 +244,7 @@ function beamselfwt1() {
 
     }, 1);
     setTimeout(function() {
-      document.getElementById("longerbeam1selfwt").innerHTML = "11.25 KN";
+      document.getElementById("longerbeam1selfwt").innerHTML = "11.25 kN";
     }, 800);
     setTimeout(function() {
       document.getElementById("text17").style.visibility="visible";
@@ -257,7 +257,7 @@ function beamselfwt1() {
       document.getElementById("button8").style.visibility="visible";
     }, 1400);
       setTimeout(function() {
-      document.getElementById("longerbeam2selfwt2").innerHTML ="11.25 KN";
+      document.getElementById("longerbeam2selfwt2").innerHTML ="11.25 kN";
     }, 1200);
     
     document.getElementById("longerbeam1selfwt").style.display = "block"; 
@@ -310,10 +310,10 @@ function beamselfwt2() {
 
     }, 1);
     setTimeout(function() {
-      document.getElementById("shorterbeam1selfwt").innerHTML = "6.75 KN";
+      document.getElementById("shorterbeam1selfwt").innerHTML = "6.75 kN";
     }, 800);
     setTimeout(function() {
-      document.getElementById("shorterbeam2selfwt").innerHTML ="6.75 KN";
+      document.getElementById("shorterbeam2selfwt").innerHTML ="6.75 kN";
       document.getElementById("text20").style.visibility="visible";
       document.getElementById("text21").style.visibility="visible";
       document.getElementById("text22").style.visibility="visible";
@@ -381,12 +381,15 @@ function Ah() {
 
     }, 1);
     setTimeout(function() {
-      document.getElementById("horiAcclertnCoeff").innerHTML = (((zonefactor)/100)/2) * (((importancefactor) / (responcefactor)) * ((SAGvalue))) ;
+      document.getElementById("horiAcclertnCoeff").innerHTML = ((((zonefactor) / 100) / 2) * ((importancefactor) / (responcefactor)) * (parseFloat(SAGvalue))).toFixed(4);
       document.getElementById("text26").style.visibility="visible";
       document.getElementById("text25").style.visibility="visible";
       document.getElementById("text27").style.visibility="visible";
       document.getElementById("finalloadW").style.visibility="visible";
       document.getElementById("horiacclerationcoeff").style.visibility="visible";
+      document.getElementById("stand_img2a").style.visibility="hidden";
+      document.getElementById("stand_img1a").style.visibility="hidden";
+
       document.getElementById("button9").style.visibility="visible";
 
     }, 800);
@@ -422,13 +425,13 @@ function calcbaseshear() {
 
 
   // Check if input1 is 4 and input2 is 1
-  if (finalloadW == 179.02 ) { 
+  if (finalloadW == 196.22 ) { 
     // Slowly display the text after 2 seconds
     setTimeout(function() {
     document.getElementById("wrong4b").style.visibility="hidden";
   }, 1);
     setTimeout(function() {
-      document.getElementById("baseshear").innerHTML = (parseFloat(finalloadW)) * (parseFloat(horiacclerationcoeff)).toFixed(2);
+      document.getElementById("baseshear").innerHTML = ((parseFloat(finalloadW)) * (parseFloat(horiacclerationcoeff))).toFixed(2);
       document.getElementById("wrong4b").style.visibility="hidden";
     }, 800);
 
@@ -461,7 +464,7 @@ function calcbaseshear() {
   } else {
     // Display an error message
     setTimeout(function() {
-   document.getElementById("wrong4b").innerHTML = "Wrong Input. W<sub>T</sub>= 179.02 KN";
+   document.getElementById("wrong4b").innerHTML = "Wrong Input. W<sub>T</sub>= 196.22 kN";
   }, 1000);
    document.getElementById("wrong4b").style.display = "block";
   }
