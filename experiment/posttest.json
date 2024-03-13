@@ -1,7 +1,7 @@
 {
   "version": 2.0,
   "questions": [{
-      "question": "1. For the structure considered, A column is part of how many frames?",
+      "question": "1. For the structure considered in this experiment, a column is part of how many frames?",
       "answers": {
         "a": "2",
         "b": "3",
@@ -9,10 +9,8 @@
         "d": "4"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "In this experiment a column is part of 2 frames"
+        
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -26,10 +24,8 @@
         "d": "None of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "In the considered structure load path is (Slab → Beam → Column → Footing)"
+
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -43,10 +39,9 @@
         "d": "0.16"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+
+        "c": "The value of zone factor (z) considered for zone IV is 0.36"
+
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -61,10 +56,8 @@
         "d": "All of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The self weight is equally divided among the floors containing the column element "
+
       },
       "correctAnswer": "a",
       "difficulty": "moderate"

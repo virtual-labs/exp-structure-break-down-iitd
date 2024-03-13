@@ -1,4 +1,4 @@
-1.	Yuan Yu Hsieh (1987) Elementry Theory of Structures, 3rd  edition,   Prentrice Hall.
+1.	Hsieh, Yuan Yu (1987) Elementry Theory of Structures, 3rd  edition,   Prentrice Hall.
 
 2.	Menon, Devdas (2008) Structural Analysis, Narosa Publishing House Pvt. Ltd., New Delhi.
 

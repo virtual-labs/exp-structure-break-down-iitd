@@ -1,1 +1,1 @@
-#### This experiment aims to carry out simplified load calculation and structural analysis of a 3D frame structure by breaking it into 2D frames. It deals with computation of dead loads (slabs and finish, beam and columns), imposed (live) loads & earthquake loads.
+#### This experiment aims to carry out simplified load calculation and problem formulation for structural analysis of a 3D frame structure by breaking it into 2D frames. It deals with computation of dead loads (slabs and floor finish, beams and columns), imposed (live) loads and earthquake loads.
