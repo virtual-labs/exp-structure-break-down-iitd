@@ -8,7 +8,7 @@
 
 | SNo. | Name | Institute |
 | :--: | :-- | :-------: |
-|  1   | Sayed Sameer hasan | IIT Delhi |
+|  1   | Sayed Sameer Hasan | IIT Delhi |
 
 ### Content Developers (Subject matter):
 
