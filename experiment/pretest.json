@@ -41,7 +41,7 @@
       },
       "explanations": {
 
-        "b": "(DL + IL + EL) 1.5 is not recommended by IS 456 (2000) "
+       "b": "(DL + IL + EL) 1.5 is not recommended by IS 456 (2000)"
 
       },
       "correctAnswer": "b",
