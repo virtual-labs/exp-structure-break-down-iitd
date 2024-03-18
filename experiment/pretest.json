@@ -40,10 +40,9 @@
         "d": "1.5 (DL + EL)"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "(DL + IL + EL) 1.5 is not recommended by IS 456 (2000) ",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+
+        "b": "(DL + IL + EL) 1.5 is not recommended by IS 456 (2000)"
+
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -57,16 +56,14 @@
         "d": "Non of the above"
       },
       "explanations": {
-        "a": "The unit weight of reinforced cement concrete as per IS 456-2000 is 2500 kg/m<sup>3</sup>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The unit weight of reinforced cement concrete as per IS 456-2000 is 2500 kg/m<sup>3</sup>"
+
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "4. Which IS code is used for imposed load calculations structure?",
+      "question": "5. Which IS code is used for imposed load calculations structure?",
       "answers": {
         "a": "IS 875 Part II (1987)",
         "b": "IS 456-2000",
@@ -74,10 +71,8 @@
         "d": "None of the above"
       },
       "explanations": {
-        "a": "IS 875 Part II (1987) is used for imposed load calculations structure",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "IS 875 Part II (1987) is used for imposed load calculations structure"
+
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
