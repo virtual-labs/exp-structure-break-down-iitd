@@ -22,7 +22,7 @@ The user may carry out the summation of loads of all the 2D frames which will le
 <center>
 <img src="images/Baseshear.png" height="180px"  width="960px" >
 
-### Fig. 2 formula 2
+
 </center><br>
 <strong>Sa/g =</strong> Design acceleration coefficient for different soil types, normalized with peak ground acceleration, corresponding to natural period T of structure (considering soil-structure interaction, if required).
 <br>
