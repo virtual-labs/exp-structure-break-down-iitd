@@ -1,0 +1,29 @@
+
+/home/runner/work/exp-structure-break-down-iitd/exp-structure-break-down-iitd/experiment/simulation/main.js
+    1:1   warning  'type' is not defined                          no-undef
+    2:3   warning  'MathJax' is not defined                       no-undef
+   12:10  warning  'totslabload1' is defined but never used       no-unused-vars
+   75:10  warning  'tottrapload1' is defined but never used       no-unused-vars
+  142:10  warning  'tottriload2' is defined but never used        no-unused-vars
+  210:10  warning  'imposed' is defined but never used            no-unused-vars
+  267:10  warning  'triimposedload2' is defined but never used    no-unused-vars
+  315:10  warning  'beamselfwt1' is defined but never used        no-unused-vars
+  381:10  warning  'beamselfwt2' is defined but never used        no-unused-vars
+  456:10  warning  'Ah' is defined but never used                 no-unused-vars
+  510:10  warning  'calcbaseshear' is defined but never used      no-unused-vars
+  568:10  warning  'restart' is defined but never used            no-unused-vars
+  574:10  warning  'navNext0' is defined but never used           no-unused-vars
+  582:10  warning  'navNext1' is defined but never used           no-unused-vars
+  628:10  warning  'navNext1a' is defined but never used          no-unused-vars
+  645:10  warning  'navNext1b' is defined but never used          no-unused-vars
+  678:10  warning  'navNext1c' is defined but never used          no-unused-vars
+  700:10  warning  'navNext2' is defined but never used           no-unused-vars
+  708:2   warning  '$' is not defined                             no-undef
+  721:10  warning  'add_stand' is defined but never used          no-unused-vars
+  741:10  warning  'start_analysis' is defined but never used     no-unused-vars
+  745:10  warning  'add_aluminium_bar' is defined but never used  no-unused-vars
+  766:10  warning  'add_cellotap' is defined but never used       no-unused-vars
+  783:10  warning  'start_Analysis' is defined but never used     no-unused-vars
+
+✖ 24 problems (0 errors, 24 warnings)
+
